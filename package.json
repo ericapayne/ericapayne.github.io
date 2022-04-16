@@ -1,0 +1,22 @@
+{
+  "name": "erizilla.github.io",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erizilla/erizilla.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erizilla/erizilla.github.io/issues"
+  },
+  "homepage": "https://github.com/erizilla/erizilla.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

@@ -48,7 +48,7 @@ export class Experience extends React.Component {
         <h2 className="num-header">Work Experience</h2>
         <div className="inner">
           <div role="tablist" aria-label="Job tabs" className="tabs">
-            <button className="tabs-button" role="tab" aria-selected="true" aria-controls="panel-0" id="tab-0" tabIndex="0">Cal State LA</button>
+            <button className="tabs-button" role="tab" aria-selected="true" aria-controls="panel-0" id="tab-0" tabIndex="0"><span>Cal State LA</span></button>
             <button className="tabs-button" role="tab" aria-selected="false" aria-controls="panel-1" id="tab-1" tabIndex="-1">Cal State LA</button>
             <button className="tabs-button" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabIndex="-1">Star Education</button>
             <div className="job-scroll"></div>

@@ -6,7 +6,7 @@ import game from '../../assets/imgs/gameproject.jpg';
 export class FeaturedProjects extends React.Component {
     render() {
         return (
-            <section className="featured-projects" id="projects"> 
+            <section id="projects"> 
         <h2 className="num-header">Some Of My Projects</h2>
 
         <ul className="featured">

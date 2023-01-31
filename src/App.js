@@ -21,13 +21,16 @@ function App() {
       <NavBar />
       <Social />
       <RightSide />
+      <div id='content'>
+      <main className='fillHeight'>
       <Opening />
       <About />
       <Experience />
       <FeaturedProjects />
       <OtherProjects />
       <Contact />
-      
+      </main>
+      </div>
     </div>
     
     

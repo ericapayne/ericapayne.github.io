@@ -1,7 +1,7 @@
 {
   "name": "myportfolioapp",
   "version": "0.1.0",
-  "homepage": "https://erizilla.github.io/erizilla.github.io",
+  "homepage": "https://erizilla.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

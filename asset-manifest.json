@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.a91ce70e.css",
-    "main.js": "/static/js/main.1b8fd1d7.js",
-    "static/js/787.aff6870a.chunk.js": "/static/js/787.aff6870a.chunk.js",
-    "static/media/me.png": "/static/media/me.c43a374addaa707dfc39.png",
-    "static/media/home.JPG": "/static/media/home.1f581f2ef5d3e8f1d11c.JPG",
-    "static/media/movieapp.jpg": "/static/media/movieapp.415035ceb8aaad0f24ec.jpg",
-    "static/media/gameproject.jpg": "/static/media/gameproject.f07eec0db9fab4d84311.jpg",
-    "static/media/brand.png": "/static/media/brand.fadec76d3d169f5291a9.png",
-    "index.html": "/index.html",
-    "main.a91ce70e.css.map": "/static/css/main.a91ce70e.css.map",
-    "main.1b8fd1d7.js.map": "/static/js/main.1b8fd1d7.js.map",
-    "787.aff6870a.chunk.js.map": "/static/js/787.aff6870a.chunk.js.map"
+    "main.css": "/erizilla.github.io/static/css/main.a91ce70e.css",
+    "main.js": "/erizilla.github.io/static/js/main.e8a3504f.js",
+    "static/js/787.aff6870a.chunk.js": "/erizilla.github.io/static/js/787.aff6870a.chunk.js",
+    "static/media/me.png": "/erizilla.github.io/static/media/me.c43a374addaa707dfc39.png",
+    "static/media/home.JPG": "/erizilla.github.io/static/media/home.1f581f2ef5d3e8f1d11c.JPG",
+    "static/media/movieapp.jpg": "/erizilla.github.io/static/media/movieapp.415035ceb8aaad0f24ec.jpg",
+    "static/media/gameproject.jpg": "/erizilla.github.io/static/media/gameproject.f07eec0db9fab4d84311.jpg",
+    "static/media/brand.png": "/erizilla.github.io/static/media/brand.fadec76d3d169f5291a9.png",
+    "index.html": "/erizilla.github.io/index.html",
+    "main.a91ce70e.css.map": "/erizilla.github.io/static/css/main.a91ce70e.css.map",
+    "main.e8a3504f.js.map": "/erizilla.github.io/static/js/main.e8a3504f.js.map",
+    "787.aff6870a.chunk.js.map": "/erizilla.github.io/static/js/787.aff6870a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a91ce70e.css",
-    "static/js/main.1b8fd1d7.js"
+    "static/js/main.e8a3504f.js"
   ]
 }

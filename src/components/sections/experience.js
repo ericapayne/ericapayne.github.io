@@ -1,107 +1,235 @@
-import React from "react";
+import React, {useState, useRef, useEffect} from "react";
+import styled from "styled-components";
 
-export class Experience extends React.Component {
-    render() {
-        window.addEventListener("DOMContentLoaded", () => {
-            console.log("DOM loaded");
-            const tabs = document.querySelectorAll('[role="tab"]');
-            const tabList = document.querySelector('[role="tablist"]');
-          
-            // Add a click event handler to each tab
-            tabs.forEach((tab) => {
-              tab.addEventListener("click", changeTabs);
-            });
-          });
-          function changeTabs(e) {
-            const target = e.target;
-            const parent = target.parentNode; // button
-            const grandparent = parent.parentNode; // tabs
-            const ggrandparent = grandparent.parentNode;
-            console.log(target);
-            console.log(parent);
-            console.log(grandparent);
-            console.log(grandparent.parentNode);
-            console.log(grandparent.parentNode
-                .querySelector(`#${target.getAttribute("aria-controls")}`));
-          
-            // Remove all current selected tabs
-            parent
-              .querySelectorAll('[aria-selected="true"]')
-              .forEach((t) => t.setAttribute("aria-selected", false));
-          
-            // Set this tab as selected
-            target.setAttribute("aria-selected", true);
-          
-            // Hide all tab panels
-            grandparent
-              .querySelectorAll('[role="tabpanel"]')
-              .forEach((p) => p.setAttribute("hidden", true));
-          
-            // Show the selected panel , this is grabbing inner
-            grandparent.parentNode
-              .querySelector(`#${target.getAttribute("aria-controls")}`)
-              .removeAttribute("hidden");
-          }
+const HighLight = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 2px;
+  height: 42px;
+  border-radius: 4px;
+  background: #6474e5;
+  transform: translateY(calc(${({ activeTabId }) => activeTabId} * 42px));
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0.1s;
+  @media (max-width: 600px) {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    max-width: 120px;
+    height: 2px;
+    margin-left: 50px;
+    transform: translateX(calc(${({ activeTabId }) => activeTabId} * 120px));
+  }
+  @media (max-width: 480px) {
+    margin-left: 25px;
+  }
+`;
+
+const ButtonStyle = styled.button`
+  text-decoration: none;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 42px;
+  padding: 0 20px 2px;
+  border-left: 2px solid #233554;
+  background-color: transparent;
+  color: ${({ isActive }) => (isActive ? '#6474e5' : '#8892b0')};
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+  @media (max-width: 768px) {
+    padding: 0 15px 2px;
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    padding: 0 15px;
+    border-left: 0;
+    border-bottom: 2px solid #233554;
+    text-align: center;
+  }
+  &:hover,
+  &:focus {
+    background-color: #112240;
+    color: #6474e5;
+  }
+   
+    &:active{
+      color: #6474e5;
+      outline: 0;
+    
+  }
+`;
+
+const TabListStyles = styled.div`
+  position: relative;
+  z-index: 3;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @media (max-width: 600px) {
+    display: flex;
+    overflow-x: auto;
+    width: calc(100% + 100px);
+    padding-left: 50px;
+    margin-left: -50px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 480px) {
+    width: calc(100% + 50px);
+    padding-left: 25px;
+    margin-left: -25px;
+  }
+  li {
+    &:first-of-type {
+      @media (max-width: 600px) {
+        margin-left: 50px;
+      }
+      @media (max-width: 480px) {
+        margin-left: 25px;
+      }
+    }
+    &:last-of-type {
+      @media (max-width: 600px) {
+        padding-right: 50px;
+      }
+      @media (max-width: 480px) {
+        padding-right: 25px;
+      }
+    }
+  }
+`;
+
+export const Experience = () => {
+  
+  const [activeTabId, setActiveTabId] = useState(0);
+  const [tabFocus, setTabFocus] = useState(null);
+  const tabs = useRef([]);
+
+  const focusTab = () => {
+    if (tabs.current[tabFocus]) {
+      tabs.current[tabFocus].focus();
+      return;
+    }
+    // If we are at the end, go to the start
+    if (tabFocus >= tabs.current.length) {
+      setTabFocus(0);
+    }
+    // If we're at the start, move to the end
+    if (tabFocus < 0) {
+      setTabFocus(tabs.current.length - 1);
+    }
+  };
+
+    // Only re-run the effect if tabFocus changes
+  useEffect(() => focusTab(), [tabFocus]);
+
+  // Focus on tabs when using up & down arrow keys
+  const onKeyDown = e => {
+    switch (e.key) {
+      case 'ArrowUp': {
+        e.preventDefault();
+        setTabFocus(tabFocus - 1);
+        break;
+      }
+
+      case 'ArrowDown': {
+        e.preventDefault();
+        setTabFocus(tabFocus + 1);
+        break;
+      }
+
+      default: {
+        break;
+      }
+    }
+  };
+
+  //job data object
+  const jobData = [{
+    title: 'Lead Lab Consultant',
+    company: 'Cal State LA',
+    range: 'September 2021 - May 2022',
+    duties: ['Supervised assistant lab consultants to make sure that all lab consultants follow university, ITS and Open Access Lab guidelines.', 'Resolved desktop issues on both Windows and Mac operating systems.', 'Routed service tickets to the appropriate departments and resolved them when completed using ServiceNow.']
+  },
+  {
+    title: 'Assistant Lab Consultant',
+    company: 'Cal State LA',
+    range: 'September 2017 - April 2019',
+    duties: ['Assisted students in the Open Access Lab with things like wireless printing, help with programs and copying.', 'Maintained labs in a neat and orderly manner for effective usage of equipment.', 'Regulated computer access when the labs are full using a waitlist.']
+  },
+  {
+    title: 'Technology & Games Teacher',
+    company: 'Star Education',
+    range: 'March 2015 - June 2016',
+    duties: ['Educated elementary school children grades K-5th different ways to interact with technology and proper computer skills through the use of games, coding, and other methods', 'Educated them coding by using Kano Computer Raspberry Pi Kits', 'Observed over and resolved issues on equipment including: laptops, routers and peripherals']
+  },
+  {
+    title: 'Talent Member',
+    company: 'Pacific Theatres',
+    range: 'November 2012 - March 2014',
+    duties: ['Delivered superior service while connecting with our guests and supporting efforts to achieve pacific theatres financial goals.', 'Ensured the security of all cash, receipts and tickets.', 'Cleaned and maintained the exterior and interior areas of the theatre including auditoriums, restrooms, lobbies, concession areas, and box office areas.']
+  },
+]
         
         return (
             <section className="work" id="experience" data-sr-id="2">
         <h2 className="num-header">Work Experience</h2>
         <div className="inner">
-          <div role="tablist" aria-label="Job tabs" className="tabs">
-            <button className="tabs-button" role="tab" aria-selected="true" aria-controls="panel-0" id="tab-0" tabIndex="0"><span>Cal State LA</span></button>
-            <button className="tabs-button" role="tab" aria-selected="false" aria-controls="panel-1" id="tab-1" tabIndex="-1">Cal State LA</button>
-            <button className="tabs-button" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabIndex="-1">Star Education</button>
-            <div className="job-scroll"></div>
-          </div>
+          <TabListStyles role="tabList" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
+          {jobData && jobData.map((jobs, i) => (           
+            <ButtonStyle           
+            key={i}
+            isActive={activeTabId === i}
+            onClick={() => setActiveTabId(i)}
+            ref={el => (tabs.current[i] = el)}
+            id={`tab-${i}`}
+            role="tab"
+            tabIndex={activeTabId === i ? '0' : '-1'}
+            aria-selected={activeTabId === i ? true : false}
+            aria-controls={`panel-${i}`}>
+              <span>{jobs.company}</span>
+            </ButtonStyle>
+          ))}
+          <HighLight activeTabId={activeTabId}></HighLight>
+          </TabListStyles>
+          
           <div className="panels">
-            <div className="all-panels" id="panel-0" role="tabpanel" tabIndex="0" aria-labelledby="tab-0">
-              
-              <h3>
-                <span>Lead Lab Consultant </span>
-                <span className="company">@ <a className="inline-link" href="#">Cal State LA</a></span>
-              </h3>
-              <p className="range">September 2021 - May 2022</p>
-              <div>
-                <ul>
-                  <li>Ensure that all lab consultants follow university, ITS and Open Access Lab guidelines</li>
-                  <li>Troubleshoot hardware, software, desktop and network issues</li>
-                  <li>Help clear outstanding trouble tickets</li>
-                </ul>
-              </div>
-            </div>
-            <div className="all-panels" id="panel-1" role="tabpanel" tabIndex="0" aria-labelledby="tab-1" hidden>
-              
-              <h3>
-                <span>Assistant Lab Consultant </span>
-                <span className="company">@ <a className="inline-link" href="#">Cal State LA</a></span>
-              </h3>
-              <p className="range">September 2017 - April 2019</p>
-              <div>
-                <ul>
-                  <li>Assist students in the Open Access Lab with things like wireless printing, help with programs and copying</li>
-                  <li>Troubleshoot hardware, software, desktop and network issues</li>
-                  <li>Regulate computer access when the labs are full using a waitlist</li>
-                </ul>
-              </div>
-            </div>
-            <div className="all-panels" id="panel-2" role="tabpanel" tabIndex="0" aria-labelledby="tab-2" hidden>
-              
-              <h3>
-                <span>Technology & Games Teacher </span>
-                <span className="company">@ Star Education</span>
-              </h3>
-              <p className="range">March 2015 - June 2016</p>
-              <div>
-                <ul>
-                  <li>Taught elementary school children grades K-5th different ways to interact with technology and proper computer skills through the use of games, coding, and other methods</li>
-                  <li>Taught them coding by using Kano Computer Raspberry Pi Kits</li>
-                  <li>Kept track of and did troubleshooting on equipment including: laptops, routers and peripherals</li>
-                </ul>
-              </div>
-            </div>
+              {jobData.map((jobs, i) => (
+                <div className="all-panels"
+                key={i}
+                id={`panel-${i}`}
+                role="tabpanel"
+                tabIndex={activeTabId === i ? '0' : '-1'}
+                aria-labelledby={`tab-${i}`}
+                aria-hidden={activeTabId !== i}
+                hidden={activeTabId !== i}>
+                  <h3>
+                    <span>{jobs.title}</span>
+                    <span className="company"> @ {jobs.company}</span>
+                  </h3>
+                  <p className="range">{jobs.range}</p>
+                  <div>
+                    <ul>
+                    {jobs.duties.map((duty, i) => (
+                      <li key={i}>{duty}</li>
+                    ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
           </div>
-        </div>
+        </div>        
       </section>
         );
-    }
+    
 }

@@ -1,9 +1,9 @@
 
-$navy : #0a192f;
-$dark-navy : #020c1b;
-$light-navy : #112240;
-$lightest-navy: #233554;
-$navy-shadow : rgba(2,12,27,0.7);
+$navy : #081426;
+$dark-navy : #06101e;
+$light-navy : #0a1930;
+$lightest-navy: #0f274b;
+$navy-shadow : rgba(8,20,38,0.7);
 $dark-slate : #495670;
 $slate: #8892b0;
 $light-slate: #a8b2d1;
@@ -12,7 +12,7 @@ $white : #e6f1ff;
 $violet : #6474e5;
 $violet-tint :  rgba(100,116,229, 0.1);
 $font-sans : 'Calibre', 'Inter', 'Poppins', sans-serif;
-$font-mono : 'SF Mono', 'Source Code Pro', monospace;
+$font-mono : 'SF Mono', 'Fira Code', 'Source Code Pro', monospace;
 $font-xxs: 12px;
 $font-xs: 13px;
 $font-sm: 14px;
@@ -91,6 +91,12 @@ section {
     
 }
 
+button {
+    cursor: pointer;
+    border: 0px none;
+    border-radius: 0px;   
+}
+/* Main Page CSS Start */
 #root {
     min-height: 100vh;
     display: grid;
@@ -102,22 +108,11 @@ section {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    // @media (max-width: 480px) {
-    //     padding: 0px 25px;
-    // } making everything line up except navbar
 }
 
+/* End of Main Page CSS */
 
-
-// #header {
-//     @media (max-width: 768px) {
-//         padding: 0px 25px;
-//     }
-//     @media (max-width: 1080px){
-//         padding: 0px 40px;
-//     }
-// }
-
+/* Navigation Header CSS Start*/
 .nav-header {
     display: flex;
     -moz-box-pack: justify;
@@ -129,17 +124,15 @@ section {
     z-index: 11;
     padding: 0px 50px;
     width: 95%;
-    height: $nav-height;
-    background-color: rgba(10, 25, 47, 0.85);
+    height: $nav-scroll-height;
+    background-color: rgba(8, 20, 38, 0.85);
     filter: none !important;
     pointer-events: auto !important;
     user-select: auto !important;
     backdrop-filter: blur(10px);
     transition: $transition;
-    height: $nav-scroll-height;
-    transform: translateY(0px);
-    background-color: rgba(10, 25, 47, 0.85);
     box-shadow: 0 10px 30px -10px $navy-shadow;
+    
     @media (max-width: 1080px) {
         padding: 0px 40px;
     }
@@ -152,6 +145,9 @@ section {
 
 }
 
+.nav-header-scroll-down {
+
+}
 
 
 // @media (prefers-reduced-motion: no-preference) {
@@ -246,6 +242,10 @@ section {
     }
 }
 
+/* End of Navigation Header CSS */
+
+
+/* Left and Right Side divs CSS Start*/
 .social-side {
     width: 40px;
     position: fixed;
@@ -321,8 +321,13 @@ section {
     visibility: visible;
     box-sizing: border-box;
     cursor: pointer;
+    &:hover {
+        background-color: rgba(100, 116, 229, 0.5);
+    }
 }
+/* End ofLeft and Right Side divs CSS */
 
+/* Opening.js Section CSS Start*/
 .opening {
     display: flex;
     -moz-box-pack: center;
@@ -333,11 +338,7 @@ section {
     min-height: 100vh;
     height: 100vh;
     padding: 0px;
-    //margin-left: 80px;
-    // @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-    //     height: auto;
-    //     padding-top: $nav-height;
-    //   }
+   
     p {
         max-width: 600px;
         margin: 20px 0px 0px;
@@ -356,8 +357,6 @@ section {
         align-self: center;
     }
 }
-
-
 
 .social-media a{
     color: $white;
@@ -391,21 +390,13 @@ section {
     color: #fff;
 }
 
-// .fa-github {
-//     color:#e6f1ff;
-// }
 
+/* End of Opening.js Section CSS */
 
+/* about.js Section CSS Start*/
 .about-me {
     max-width: 900px;
-    // margin: 0px auto;
-    // padding: 100px 0px;
-//    @media (max-width: 768px) {
-//             padding: 80px 0px;
-//           }
-//           @media (max-width: 480px) {
-//             padding: 60px 0px;
-//         }
+    
     .inner {
         display: grid;
         grid-template-columns: 3fr 2fr;
@@ -416,7 +407,10 @@ section {
         p {
             margin: 20px 0px 0px;
             max-width: 540px;
-            
+            a {
+                color: $violet;
+                font-weight: 500;
+            }
         }
     }
     em {
@@ -427,9 +421,6 @@ section {
     }
     
 }
-
-
-
 
 .num-header {
     display: flex;
@@ -474,10 +465,18 @@ section {
     li {
         position: relative;
     margin-bottom: 10px;
-    // padding-left: 20px;
+    padding-left: 20px;
     font-family: $font-mono;
-    font-size: $font-sm;
-    text-align: center;
+    font-size: $font-xs;
+    // text-align: center;
+        &:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: $violet;
+            font-size: $font-sm;
+            line-height: 12px;
+        }
     }
     p {
         margin: 10px 0px 0px !important;
@@ -512,6 +511,10 @@ section {
     
 }
 
+/* End of about.js Section CSS */
+
+/* Experience.js Section CSS Start*/
+
 .work {
     max-width: 700px;
     margin: 0px auto;
@@ -522,108 +525,7 @@ section {
         @media(max-width: 600px) {
             display: block;
         }
-    }
-    & .tabs {
-        position: relative;
-        z-index: 3;
-        width: max-content;
-        padding: 0px;
-        margin: 0px;
-        list-style: none;
-        @media (max-width: 600px) {
-            display: flex;
-            overflow-x: auto;
-            width: calc(100% + 100px);
-            padding-left: 50px;
-            margin-left: -50px;
-            margin-bottom: 30px;
-        }
-        @media (max-width: 480px) {
-            width: calc(100% + 50px);
-            padding-left: 25px;
-            margin-left: -25px;
-        }
-    }
-    & button {
-        cursor: pointer;
-        border: 0px none;
-        border-left-color: currentcolor;
-        border-left-style: none;
-        border-left-width: 0px;
-        border-radius: 0px;
-        @media (max-width: 768px) {
-            padding: 0px 15px 2px;
-        }
-        @media (max-width: 600px) {
-            display: flex;
-            -moz-box-pack: center;
-            justify-content: center;
-            -moz-box-align: center;
-            align-items: center;
-            min-width: 120px;
-            padding: 0px 15px;
-            border-left: 0px none;
-            border-bottom: 2px solid $lightest-navy;
-            text-align: center;
-        }
-    }
-}
-
-.tabs-button {
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); 
-    display: flex;
-    -moz-box-align: center;
-    align-items: center;
-    width: 100%;
-    height: 42px;
-    padding: 0px 20px 2px;
-    border-left: 2px solid $lightest-navy;
-    background-color: transparent;
-    color: $slate;
-    font-family: $font-mono; 
-    font-size: 13px;
-    text-align: left;
-    white-space: nowrap;
-    :hover {
-        background-color: rgba(100, 116, 229, 0.3);
-        color: $violet;
-    }
-}
-
-[aria-selected ="true"] {
-    color: #6474e5;
-}
-.job-scroll {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    width: 2px;
-    height: 42px;
-    border-radius: 4px;
-    background: #6474e5;
-    transform: translateY(calc(0 * $tab-height));
-    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-    @media (max-width: 600px) {
-        top: auto;
-        bottom: 0px;
-        width: 100%;
-        max-width: $tab-width;
-        height: 2px;
-        margin-left: 50px;
-        transform: translateX(calc(0 * $tab-width));
-    }
-    @media (max-width: 480px) {
-        margin-left: 25px;
-    }
-}
-/* fix the scroll thingy to work */
-::selection {
-    background-color: $lightest-navy;
-    color: $lightest-slate;
+    }    
 }
 
 .panels {
@@ -648,8 +550,10 @@ section {
         }
         & .range {
             margin-bottom: 25px;
-            color: $lightest-slate;
+            color: $light-slate;
             font-size: 13px;
+            font-family: $font-mono;
+            font-weight: 300;
         }
         & ul {
             padding: 0px;
@@ -670,6 +574,10 @@ section {
         }
     }
 }
+
+/* End of Experience.js Section CSS */
+
+/* featuredProj.js Section CSS Start */
 
 .featured-projects {
     max-width: 1000px;
@@ -746,7 +654,7 @@ section {
         line-height: 1.1;
     }
     & .project-description {
-        box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+        box-shadow: 0 10px 30px -15px $navy-shadow;
         position: relative;
         z-index: 2;
         padding: 25px;
@@ -772,9 +680,10 @@ section {
         }
         li {
             color: $lightest-slate;
+            font-family: $font-mono;
             white-space: nowrap;
             margin: 0px 20px 5px 0px;
-            font-size: 13px;
+            font-size: $font-xs;
         }
     }
     & .project-links {
@@ -787,7 +696,7 @@ section {
         color: $lightest-slate;
     }
     & .project-image {
-        box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+        box-shadow: 0 10px 30px -15px rgba(6,16,30,0.7);
     /* transition: var(--transition); */
         grid-area: 1 / 6 / -1 / -1; 
         position: relative;
@@ -893,7 +802,10 @@ section {
 .project-icon:hover {
     color: #6474e5;
 }
-// beginning of other projects css
+
+/* End of featureProj.js section CSS */
+
+/* Start of projects.js section css */
 .other-projects {
     display: flex;
     flex-direction: column;
@@ -903,6 +815,12 @@ section {
     padding: 100px 0px;
     max-width: 1000px;
     box-sizing: border-box;
+}
+
+.github-link {
+    font-family: $font-mono;
+    font-size: $font-sm;
+    color: $violet;
 }
 
 .project-top {
@@ -918,24 +836,26 @@ section {
     }
 } 
 
-    
-    .project-grid {
-        list-style: none;
-        padding: 0px;
-        margin: 50px 0px 0px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 15px;
-        position: relative;      
-        }        
+.project-grid {
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    position: relative;     
+    :hover, :focus-within {
+        .project-inner {
+            transform: translateY(-7px);
+        }
+        
+    } 
+}        
 
-.project-title a {
-    text-decoration: none;
-    color:$lightest-slate;
-}
 .other-list-items {
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
+    transition: $transition;
     .project-inner {
         box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
         display: flex;
@@ -968,7 +888,9 @@ section {
         margin: 0px 0px 10px;
         color: $lightest-slate;
         font-size: $font-xxl;
-        font-weight: 600;
+        a {
+            position: static;
+        }
     }
     & .project-desc {
         color: $light-slate;
@@ -987,7 +909,8 @@ section {
             box-sizing: border-box;
         }
         & li {
-            font-size: $font-xs;
+            font-family: $font-mono;
+            font-size: $font-xxs;
             line-height: 1.75;
             &:not(:last-of-type){
                 margin-right: 15px;
@@ -998,6 +921,10 @@ section {
 p:last-child , p:last-of-type {
     margin: 0px;
 }
+
+/* End of projects.js section css */
+
+/* Start of contact.js section css */
 
 .contact {
     max-width: 600px;
@@ -1036,8 +963,7 @@ p:last-child , p:last-of-type {
 }
 
 
-
-/*new css for responsive menu*/
+/* new css for responsive menu when size changes */
 .small-menu {
     display: none;
     @media (max-width: 768px) {
@@ -1149,19 +1075,6 @@ p:last-child , p:last-of-type {
     position: relative;
     width: 30px;
     height: 24px;
-    // @media (max-width: 786px) {
-    //     position: relative;
-    // z-index: 10;
-    // margin-right: -15px;
-    // padding: 15px;
-    // border: 0;
-    // background-color: transparent;
-    // color: inherit;
-    // text-transform: none;
-    // transition-timing-function: linear;
-    // transition-duration: 0.15s;
-    // transition-property: opacity, filter;
-    // }
 }
 
 .nav-menu-inner {
@@ -1222,22 +1135,7 @@ p:last-child , p:last-of-type {
     transition: $ham-after;
 }
 
-// main {
-//     margin: 0px auto;
-// width: 100%;
-// max-width: 1600px;
-// min-height: 100vh;
-// padding: 200px 100px;
-// @media (max-width: 480px) {
-//     padding: 125px 25px;
-// }
-// @media (max-width: 768px){
-//     padding: 150px 50px;
-// }
-// @media (max-width: 1080px){
-//     padding: 200px 100px;
-// }
-// }
+
 main.fillHeight {
     padding: 0px 150px;
     @media (max-width: 1080px) {
@@ -1339,6 +1237,9 @@ main.fillHeight {
             transition: $transition;
             width: 100%;
             padding: 3px 3px 20px;
+            &:hover {
+                color: $violet;
+            }
         }
         
     }
@@ -1357,6 +1258,9 @@ main.fillHeight {
     padding: 18px 50px;
     margin: 10% auto 0px;
     width: max-content;
+    &:hover {
+        background-color: rgba(100, 116, 229, 0.3)
+    }
 }
 
 .side-menu-opened nav {
@@ -1370,4 +1274,38 @@ main.fillHeight {
         color: $lightest-slate;
         font-family: $font-mono;
         text-align: center;
+}
+
+/* End of menu.js css */
+.nb-link {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: $transition;
+    color: $violet;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $violet;
+      outline: 0;
+      &:after {
+        width: 100%;
+      }
+      & > * {
+        color: $violet !important;
+        transition: $transition;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      position: relative;
+      bottom: 0.37em;
+      background-color: $violet;
+      transition: $transition;
+      opacity: 0.5;
+    }
 }

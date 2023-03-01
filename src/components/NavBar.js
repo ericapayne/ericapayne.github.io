@@ -8,6 +8,7 @@ import { Menu } from "./Menu";
 export class NavBar extends React.Component {
     
     render() {
+        
         const sections = ['about', 'experience', 'projects', 'contact'];
 
         const navLinks = sections.map(section => {
@@ -32,7 +33,7 @@ export class NavBar extends React.Component {
         {navLinks}
         </ol>
         <div>
-            <a className="resume-button" href="https://drive.google.com/file/d/1omzyn6Gc-KIsQJ2znEMA9FUpwlvwZnzL/view?usp=sharing" role="button"> Resume</a>
+            <a className="resume-button" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1qybuxkkUHVvNWuqk202c3kINMb9hOidl/view?usp=sharing" role="button"> Resume</a>
           </div>
       </div>
       <Menu />

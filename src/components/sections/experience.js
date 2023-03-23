@@ -173,12 +173,7 @@ export const Experience = () => {
     range: 'March 2015 - June 2016',
     duties: ['Educated elementary school children grades K-5th different ways to interact with technology and proper computer skills through the use of games, coding, and other methods', 'Educated them coding by using Kano Computer Raspberry Pi Kits', 'Observed over and resolved issues on equipment including: laptops, routers and peripherals']
   },
-  {
-    title: 'Talent Member',
-    company: 'Pacific Theatres',
-    range: 'November 2012 - March 2014',
-    duties: ['Delivered superior service while connecting with our guests and supporting efforts to achieve pacific theatres financial goals.', 'Ensured the security of all cash, receipts and tickets.', 'Cleaned and maintained the exterior and interior areas of the theatre including auditoriums, restrooms, lobbies, concession areas, and box office areas.']
-  },
+  
 ]
         
         return (

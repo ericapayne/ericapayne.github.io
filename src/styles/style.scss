@@ -358,11 +358,20 @@ button {
     }
 }
 
-.social-media a{
-    color: $white;
-    & i {
-        font-size: 42px;
-        margin: 20px 10px;
+.social-media .email-link{
+    color: #6474e5;
+    background-color: transparent;
+    border: 1px solid #6474e5;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 18px;
+    
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 25px;
+    &:hover{
+        background-color: rgba(100, 116, 229, 0.3);
     }
 }
 
@@ -516,7 +525,7 @@ button {
 /* Experience.js Section CSS Start*/
 
 .work {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0px auto;
     padding: 100px 0px;
     .inner {
@@ -856,6 +865,8 @@ button {
     position: relative;
     cursor: pointer;
     transition: $transition;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     .project-inner {
         box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
         display: flex;

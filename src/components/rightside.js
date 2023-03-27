@@ -18,16 +18,16 @@ export const RightSide = () => {
     window.addEventListener('scroll', toggleVisible);
 
     const toTop = () => window.scrollTo(
-        {
-            
+        {        
             top: 0, behavior: 'smooth'
-    });
+        }
+    );
+
     return (
-        <div className="right-side">
+      <div className="right-side">
         <button type="button" className="back-to-top" onClick={toTop} style={{display: visible ? 'inline' : 'none'}}>
           <i className="fas fa-hand-point-up fa-xl" ></i>
         </button>
       </div>
-    );
-    
+    );      
 }

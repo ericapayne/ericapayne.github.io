@@ -2,6 +2,7 @@ import React from "react";
 import bookex from '../../assets/imgs/home.JPG';
 import movieapp from '../../assets/imgs/movieapp.jpg';
 import game from '../../assets/imgs/gameproject.jpg';
+import sjamming from '../../assets/imgs/js1.png';
 
 export class FeaturedProjects extends React.Component {
     render() {
@@ -10,6 +11,23 @@ export class FeaturedProjects extends React.Component {
             <h2 className="num-header">Some Of My Projects</h2>
 
             <ul className="featured">
+            <li className="featured-list">
+                <div className="project-content">
+                  <div>
+                    <p className="project-overline">Featured Project</p>
+                    <h3 className="project-title"><a href="https://github.com/erizilla/spotify-jammming-project">Spotify Playlist Web App</a></h3>
+                    <div className="project-description"><p>A React application that lets you search Spotify songs and add them to a playlist and save to your Spotify account.</p></div>
+                    <ul className="project-language-list">
+                      <li>React</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/erizilla/spotify-jammming-project"></a></i></div>
+                  </div>
+                </div>
+                <div className="project-image"><img src={sjamming} style={{width: "600px"}}/></div>
+              </li>
               <li className="featured-list">
                 <div className="project-content">
                   <div>

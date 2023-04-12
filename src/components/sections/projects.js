@@ -10,7 +10,8 @@ export class OtherProjects extends React.Component {
             {id: 2, title: 'Magic: the Gathering Card Search', desc: "A JavaScript command line interface (CLI) program for searching Magic The Gathering Card Game card information", src: "https://github.com/erizilla/Javascript-MTG-card-search", langList: ['JavaScript', 'Express', 'CORS']},
             {id: 3, title: 'Pomodoro Timer Mobile Application', desc: "My expo pomodoro break timer mobile application made using React Native and Expo", src: "https://github.com/erizilla/Pomodoro-Timer", langList: ['React Native', ' JavaScript']},
             {id: 4, title: 'Saute : Recipe Mobile Application', desc: "A cooking and recipe mobile aplication", src: "https://github.com/erizilla/saute-app", langList: ['React Native', 'JavaScript']},
-            {id: 5, title: 'Quiz Mobile Application', desc: "This quiz app project was made using expo and React Native. It has 3 categories to choose from. There are 10 questions and a results page.", src: "https://github.com/erizilla/Quiz-app", langList: ['React Native', 'JavaScript']}
+            {id: 5, title: 'Quiz Mobile Application', desc: "This quiz app project was made using expo and React Native. It has 3 categories to choose from. There are 10 questions and a results page.", src: "https://github.com/erizilla/Quiz-app", langList: ['React Native', 'JavaScript']}, 
+            {id: 6, title: 'Build Your Own Adventure Game', desc: "A text-based Choose Your Own Adventure Game built in C#", src: "https://github.com/erizilla/build-your-own-adventure-game", langList: ['C#']}
         ];
 
         const results = [];

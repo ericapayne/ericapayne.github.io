@@ -15,7 +15,7 @@ export class FeaturedProjects extends React.Component {
                 <div className="project-content">
                   <div>
                     <p className="project-overline">Featured Project</p>
-                    <h3 className="project-title"><a href="https://github.com/erizilla/spotify-jammming-project">Spotify Playlist Web App</a></h3>
+                    <h3 className="project-title"><a href="https://github.com/ericapayne/spotify-jammming-project">Spotify Playlist Web App</a></h3>
                     <div className="project-description"><p>A React application that lets you search Spotify songs and add them to a playlist and save to your Spotify account.</p></div>
                     <ul className="project-language-list">
                       <li>React</li>
@@ -23,7 +23,7 @@ export class FeaturedProjects extends React.Component {
                       <li>CSS</li>
                       <li>JavaScript</li>
                     </ul>
-                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/erizilla/spotify-jammming-project"></a></i></div>
+                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/ericapayne/spotify-jammming-project"></a></i></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={sjamming} style={{width: "600px"}}/></div>
@@ -32,7 +32,7 @@ export class FeaturedProjects extends React.Component {
                 <div className="project-content">
                   <div>
                     <p className="project-overline">Featured Project</p>
-                    <h3 className="project-title"><a href="https://github.com/erizilla/Book-exchange">Book Exchange Website</a></h3>
+                    <h3 className="project-title"><a href="https://github.com/ericapayne/Book-exchange">Book Exchange Website</a></h3>
                     <div className="project-description"><p>A web application for a book exchange system. You have to be logged in to view books, post a book, create a wishlist and also add books to your cart.</p></div>
                     <ul className="project-language-list">
                       <li>Django</li>
@@ -40,7 +40,7 @@ export class FeaturedProjects extends React.Component {
                       <li>CSS</li>
                       <li>JavaScript</li>
                     </ul>
-                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/erizilla/Book-exchange"></a></i></div>
+                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/ericapayne/Book-exchange"></a></i></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={bookex} style={{width: "600px"}}/></div>
@@ -49,7 +49,7 @@ export class FeaturedProjects extends React.Component {
                 <div className="project-content">
                   <div>
                     <p className="project-overline">Featured Project</p>
-                    <h3 className="project-title"><a href="https://github.com/erizilla/Movie-Search-App">Movie Search Mobile App</a></h3>
+                    <h3 className="project-title"><a href="https://github.com/ericapayne/Movie-Search-App">Movie Search Mobile App</a></h3>
                     <div className="project-description"><p>A mobile application where you can search a keyword in a movie title, see the search results and then see more details about the selected movie.</p></div>
                     <ul className="project-language-list">
                       <li>React Native</li>
@@ -57,7 +57,7 @@ export class FeaturedProjects extends React.Component {
                       <li>npm</li>
                       <li>Movie database API</li>
                     </ul>
-                    <div className="project-links"><a href="https://github.com/erizilla/Movie-Search-App"><i className="fa-brands fa-github"></i></a></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/Movie-Search-App"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={movieapp} style={{width: "600px"}}/></div>
@@ -66,13 +66,13 @@ export class FeaturedProjects extends React.Component {
                 <div className="project-content">
                   <div>
                     <p className="project-overline">Featured Project</p>
-                    <h3 className="project-title"><a href="https://github.com/erizilla/Alpaca-My-Bags-Unity-Game">Unity Engine Game</a></h3>
+                    <h3 className="project-title"><a href="https://github.com/ericapayne/Alpaca-My-Bags-Unity-Game">Unity Engine Game</a></h3>
                     <div className="project-description"><p>A 3D open adventure game about an alpaca lost from home and trying to make it back through various levels and collection of items.</p></div>
                     <ul className="project-language-list">
                       <li>C#</li>
                       <li>Unity</li>
                     </ul>
-                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/erizilla/Alpaca-My-Bags-Unity-Game"></a></i></div>
+                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/ericapayne/Alpaca-My-Bags-Unity-Game"></a></i></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={game} style={{width: "600px"}}/></div>

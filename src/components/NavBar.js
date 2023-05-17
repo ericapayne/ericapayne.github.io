@@ -35,7 +35,7 @@ export const NavBar = ({ isHome }) => {
     <header className="nav-header">
       <nav className="nav">
         <div className="logo">
-          <a className="" href="index.html"><img className="branding" src={brandpic} alt="branding" width="109.5px" height="36px"/>
+          <a className="" href="index.html"><img className="branding" src={brandpic} alt="branding image" width="109.5px" height="36px"/>
           </a>
         </div>
         <div className="nav-side">
@@ -43,7 +43,7 @@ export const NavBar = ({ isHome }) => {
             {navLinks}
           </ol>
           <div>
-              <a className="resume-button" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13vDipqMVL3lpMinsTDjtGTpQl2t4T9eR/view?usp=sharing" role="button"> Resume</a>
+              <a className="resume-button" aria-label="resume button" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13vDipqMVL3lpMinsTDjtGTpQl2t4T9eR/view?usp=sharing" role="button"> Resume</a>
           </div>
         </div>
         <Menu />

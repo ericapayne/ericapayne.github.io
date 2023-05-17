@@ -26,7 +26,7 @@ export const Menu = () => {
                 {/* <Helmet><body className={menuOpen ? 'blur' : ''} /></Helmet> */}
                 
                 <div>
-                    <button className={`ham-button ${menuOpen ? "ham-button-clicked" : ""}`}
+                    <button aria-label="hamburger menu button" className={`ham-button ${menuOpen ? "ham-button-clicked" : ""}`}
                     onClick={toggleMenu}>
                         
                         <div className="nav-menu">

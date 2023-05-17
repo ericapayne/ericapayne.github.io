@@ -25,7 +25,7 @@ export class OtherProjects extends React.Component {
                                 <div className="folder"><i className="fa-regular fa-folder-closed fa-2xl" style={{color: "#6474e5"}}></i></div>
                                 <div className="project-links"><a href="{project.src}" rel="noopener noreferrer" target="_blank"><i className="fa-brands fa-github fa-lg"></i></a></div>
                             </div>
-                            <h3 className="project-title"><a href={project.src} rel="noopener noreferrer" target="_blank">{project.title}</a></h3>
+                            <h3 className="project-title"><a href={project.src} alt={project.name + "project link"} rel="noopener noreferrer" target="_blank">{project.title}</a></h3>
                             <div className="project-desc">
                                 <p>{project.desc}</p>
                             </div>

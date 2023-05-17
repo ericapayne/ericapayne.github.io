@@ -7,7 +7,7 @@ export class Social extends React.Component {
             <div className="social-side" >
               <ul className="social-list">
                 <li><a href="https://github.com/ericapayne"><i className="fa-brands fa-github" ></i></a></li>
-                <li><a href="https://www.linkedin.com/in/erica-payne-553b331b5/"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/erica-payne-d/"><i className="fa-brands fa-linkedin-in"></i></a></li>
                 <li><a href="mailto:ericapyn@gmail.com"><i className="fa-regular fa-envelope"></i></a></li>
               </ul>
             </div>

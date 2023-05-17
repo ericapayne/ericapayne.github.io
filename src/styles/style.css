@@ -16,7 +16,7 @@ body {
   color: #8892b0;
   font-family: "Calibre", "Inter", "Poppins", sans-serif;
   font-size: 20px;
-  line-height: 1.3;
+  line-height: 1.5;
   counter-reset: section;
 }
 @media (max-width: 480px) {

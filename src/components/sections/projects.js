@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 
-
+//const [showMore, setShowMore] = useState(false);
 
 export class OtherProjects extends React.Component {
     render(){
+        
         const projects = [
             {id: 1, title: 'Portfolio V1', desc: "This is the first version of my portfolio website that I made", src: "https://github.com/ericapayne/v1-Portfolio", langList: ['HTML', 'CSS','SCSS']},
             {id: 2, title: 'Magic: the Gathering Card Search', desc: "A JavaScript command line interface (CLI) program for searching Magic The Gathering Card Game card information", src: "https://github.com/ericapayne/Javascript-MTG-card-search", langList: ['JavaScript', 'Express', 'CORS']},
@@ -19,13 +20,14 @@ export class OtherProjects extends React.Component {
         projects.forEach(project => {
             results.push(
                 <li key={project.id} className="other-list-items">
+                    
                     <div className="project-inner">
                         <header>
                             <div className="project-top">
                                 <div className="folder"><i className="fa-regular fa-folder-closed fa-2xl" style={{color: "#6474e5"}}></i></div>
-                                <div className="project-links"><a href="{project.src}" rel="noopener noreferrer" target="_blank"><i className="fa-brands fa-github fa-lg"></i></a></div>
+                                <div className="project-links"><a href="{project.src}" rel="noopener noreferrer" target="_blank" aria-label="GitHub Link"><i className="fa-brands fa-github fa-lg"></i></a></div>
                             </div>
-                            <h3 className="project-title"><a href={project.src} alt={project.name + "project link"} rel="noopener noreferrer" target="_blank">{project.title}</a></h3>
+                            <h3 className="project-title"><a href={project.src} aria-label={project.name + "project link"} rel="noopener noreferrer" target="_blank">{project.title}</a></h3>
                             <div className="project-desc">
                                 <p>{project.desc}</p>
                             </div>
@@ -49,6 +51,7 @@ export class OtherProjects extends React.Component {
                     <ul className="project-grid" id="myprojects">
                         {results}                     
                     </ul>
+                    {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>View More</button> */}
             </section>
         );
     }

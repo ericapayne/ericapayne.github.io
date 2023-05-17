@@ -92,8 +92,8 @@ button {
   top: 0px;
   z-index: 11;
   padding: 0px 50px;
-  width: 95%;
-  height: 70px;
+  width: 93%;
+  height: 100px;
   background-color: rgba(8, 20, 38, 0.85);
   filter: none !important;
   pointer-events: auto !important;
@@ -103,7 +103,6 @@ button {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  box-shadow: 0 10px 30px -10px rgba(8, 20, 38, 0.7);
 }
 @media (max-width: 1080px) {
   .nav-header {
@@ -162,7 +161,8 @@ button {
   margin: 0px 5px;
   position: relative;
   counter-increment: item 1;
-  font-size: 13px;
+  font-size: 14px;
+  text-transform: capitalize;
 }
 .nav-side li a {
   padding: 10px;
@@ -174,7 +174,7 @@ button {
   content: "0" counter(item) ".";
   margin-right: 5px;
   color: #6474e5;
-  font-size: 12px;
+  font-size: 14px;
   text-align: right;
 }
 .nav-side .resume-button {
@@ -291,14 +291,16 @@ button {
   padding: 0px;
 }
 .opening p {
-  max-width: 600px;
-  margin: 20px 0px 0px;
-  font-size: 20px;
-  line-height: 1.6;
+  max-width: 540px;
+  margin: 20px 0px 0px !important;
+}
+.opening h3 {
+  margin-top: 5px !important;
+  color: #8892b0;
+  line-height: 0.9;
 }
 .opening .big-heading {
   margin: 0px;
-  margin-bottom: 20px;
   font-size: clamp(40px, 8vw, 80px);
 }
 .opening b {
@@ -306,6 +308,30 @@ button {
 }
 .opening div {
   align-self: center;
+}
+.opening .one {
+  color: #6474e5;
+  font-weight: 400;
+  margin: 0px 0px 30px 4px;
+  font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
+  font-size: clamp(14px, 5vw, 16px);
+}
+.opening .linkedin-link {
+  color: #6474e5;
+  background-color: transparent;
+  border: 1px solid #6474e5;
+  border-radius: 4px;
+  padding: 1.25rem 1.75rem;
+  font-size: 14px;
+  font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: 50px;
+}
+.opening .linkedin-link:hover {
+  background-color: rgba(100, 116, 229, 0.1);
 }
 
 .social-media .email-link {
@@ -465,7 +491,12 @@ button {
 
 .mypic {
   position: relative;
-  max-width: 300px;
+  width: 350px;
+  height: 385.2px;
+  display: block;
+}
+.mypic img {
+  border-radius: 4px;
 }
 @media (max-width: 768px) {
   .mypic {
@@ -475,6 +506,20 @@ button {
     width: 330px;
     height: 356.4px;
   }
+}
+.mypic::before, .mypic::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.mypic::after {
+  border: 2px solid #6474e5;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
 }
 
 /* End of about.js Section CSS */
@@ -800,6 +845,23 @@ button {
   max-width: 1000px;
   box-sizing: border-box;
 }
+.other-projects .more-button {
+  color: #6474e5;
+  background-color: transparent;
+  border: 1px solid #6474e5;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1.25rem 1.75rem;
+  margin: 80px auto 0px;
+}
+.other-projects .more-button:hover {
+  background-color: rgba(100, 116, 229, 0.1);
+}
 
 .github-link {
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
@@ -912,12 +974,13 @@ p:last-child, p:last-of-type {
   border: 1px solid #6474e5;
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
-  font-size: 20px;
+  font-size: 14px;
+  font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  margin-top: 50px;
+  margin: 50px;
 }
 .contact a {
   display: inline-block;

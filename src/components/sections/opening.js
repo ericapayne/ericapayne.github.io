@@ -12,16 +12,17 @@ export const Opening = () => {
     // }, []);
   
 
-    const one = <h2 style={{color: "#6474e5"}}><span className="wave">👋</span>Hi, my name is</h2>;
+    const one = <h1 className="one" >Hi, my name is</h1>;
 
-    const two = <h2 className="big-heading"> Erica Payne</h2>;
+    const two = <h2 className="big-heading"> Erica Payne.</h2>;
+    const sub = <h3 className="big-heading">I build apps for the web.</h3>
 
-    const three = (<p className="lead">Welcome, I am a Software Engineer born and raised in Los Angeles. I have my Bachelors in Computer Science from California State University Los Angeles. I am passionate about <b> Web Development</b>, <b>App Development</b>, and <b>Full Stack Development.</b></p>);
+    const three = (<p>Welcome, I am a Software Engineer born and raised in Los Angeles. I have my Bachelors in Computer Science from California State University Los Angeles. I am passionate about <b> Web Development</b> and <b>Full Stack Development. </b>I am currently looking for my next opportunity in a company.</p>);
 
-    const four = (<div className="social-media">
-    <a className="email-link" href="mailto:ericapyn@gmail.com">Contact Me</a></div>);
+    const four = (
+    <a className="linkedin-link" href="https://www.linkedin.com/in/erica-payne-d/" target="_blank" rel="noreferrer">Check out my LinkedIn!</a>);
 
-    const items = [one, two, three, four];
+    const items = [one, two, sub, three, four];
         
     return (
       <section className= "opening" >   

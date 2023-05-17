@@ -23,9 +23,9 @@ export const About = () => {
                 ))}
               </ul>
             <div>
-              <p className="skills-text"><i className="fa-solid fa-terminal fa-lrg" ></i> Develop front end / User Interfaces for web and mobile applications</p>
-              <p className="skills-text"><i className="fa-solid fa-terminal fa-lrg" ></i> Front end languages such as HTML, CSS, & JavaScript</p>
-              <p className="skills-text"><i className="fa-solid fa-terminal fa-lrg" ></i> Back end programming languages like Java, Python, & SQL</p>
+              <p className="skills-text"><i className="fa-solid fa-terminal fa-lrg" ></i>&nbsp; Develop front end / User Interfaces for web and mobile applications</p>
+              <p className="skills-text"><i className="fa-solid fa-terminal fa-lrg" ></i>&nbsp; Front end languages such as HTML, CSS, & JavaScript</p>
+              <p className="skills-text"><i className="fa-solid fa-terminal fa-lrg" ></i>&nbsp; Back end programming languages like Java, Python, & SQL</p>
             </div>
     
             </div>

@@ -23,10 +23,10 @@ export class FeaturedProjects extends React.Component {
                       <li>CSS</li>
                       <li>JavaScript</li>
                     </ul>
-                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/ericapayne/spotify-jammming-project" alt="Spotify Jammming Project Github Link"></a></i></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/spotify-jammming-project" alt="Spotify Jammming Project Github Link"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
-                <div className="project-image"><img src={sjamming} style={{width: "600px"}} alt="Jamming Project Screenshot"/></div>
+                <div className="project-image"><img src={sjamming} alt="Jamming Project Screenshot" loading="lazy"/></div>
               </li>
               <li className="featured-list">
                 <div className="project-content">
@@ -40,10 +40,10 @@ export class FeaturedProjects extends React.Component {
                       <li>CSS</li>
                       <li>JavaScript</li>
                     </ul>
-                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/ericapayne/Book-exchange" alt="Book Exchange Project Github Link"></a></i></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/Book-exchange" alt="Book Exchange Project Github Link"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
-                <div className="project-image"><img src={bookex} style={{width: "600px"}} alt="Book Exchange Project Screenshot"/></div>
+                <div className="project-image"><img src={bookex} alt="Book Exchange Project Screenshot" loading="lazy"/></div>
               </li>
               <li className="featured-list">
                 <div className="project-content">
@@ -60,7 +60,7 @@ export class FeaturedProjects extends React.Component {
                     <div className="project-links"><a href="https://github.com/ericapayne/Movie-Search-App" alt="Movie Search App Github Link"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
-                <div className="project-image"><img src={movieapp} style={{width: "600px"}} alt="Movie Mobile Application Screenshot"/></div>
+                <div className="project-image"><img src={movieapp}  alt="Movie Mobile Application Screenshot" loading="lazy"/></div>
               </li>
               <li className="featured-list">
                 <div className="project-content">
@@ -72,10 +72,10 @@ export class FeaturedProjects extends React.Component {
                       <li>C#</li>
                       <li>Unity</li>
                     </ul>
-                    <div className="project-links"><i className="fa-brands fa-github"><a href="https://github.com/ericapayne/Alpaca-My-Bags-Unity-Game" alt="Alpaca Game Github Link"></a></i></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/Alpaca-My-Bags-Unity-Game" alt="Alpaca Game Github Link"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
-                <div className="project-image"><img src={game} style={{width: "600px"}} alt="Alpaca Game Project Screenshot"/></div>
+                <div className="project-image"><img src={game} alt="Alpaca Game Project Screenshot" loading="lazy"/></div>
               </li>        
             </ul>       
           </section>

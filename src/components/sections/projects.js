@@ -1,21 +1,42 @@
 import React, { useState } from "react";
 
 
-//const [showMore, setShowMore] = useState(false);
 
-export class OtherProjects extends React.Component {
-    render(){
+
+export const OtherProjects = () => {
+    
         
         const projects = [
-            {id: 1, title: 'Portfolio V1', desc: "This is the first version of my portfolio website that I made", src: "https://github.com/ericapayne/v1-Portfolio", langList: ['HTML', 'CSS','SCSS']},
-            {id: 2, title: 'Magic: the Gathering Card Search', desc: "A JavaScript command line interface (CLI) program for searching Magic The Gathering Card Game card information", src: "https://github.com/ericapayne/Javascript-MTG-card-search", langList: ['JavaScript', 'Express', 'CORS']},
-            {id: 3, title: 'Pomodoro Timer Mobile Application', desc: "My expo pomodoro break timer mobile application made using React Native and Expo", src: "https://github.com/ericapayne/Pomodoro-Timer", langList: ['React Native', ' JavaScript']},
-            {id: 4, title: 'Saute : Recipe Mobile Application', desc: "A cooking and recipe mobile aplication", src: "https://github.com/ericapayne/saute-app", langList: ['React Native', 'JavaScript']},
-            {id: 5, title: 'Quiz Mobile Application', desc: "This quiz app project was made using expo and React Native. It has 3 categories to choose from. There are 10 questions and a results page.", src: "https://github.com/ericapayne/Quiz-app", langList: ['React Native', 'JavaScript']}, 
-            {id: 6, title: 'Build Your Own Adventure Game', desc: "A text-based Choose Your Own Adventure Game built in C#", src: "https://github.com/ericapayne/build-your-own-adventure-game", langList: ['C#']}
+            {
+                id: 1, title: 'Portfolio V1', desc: "This is the first version of my portfolio website that I made", src: "https://github.com/ericapayne/v1-Portfolio", langList: ['HTML', 'CSS','SCSS']
+            },
+            {
+                id: 2, title: 'Magic: the Gathering Card Search', desc: "A JavaScript command line interface (CLI) program for searching Magic The Gathering Card Game card information", src: "https://github.com/ericapayne/Javascript-MTG-card-search", langList: ['JavaScript', 'Express', 'CORS']
+            },
+            {
+                id: 3, title: 'Pomodoro Timer Mobile Application', desc: "My expo pomodoro break timer mobile application made using React Native and Expo", src: "https://github.com/ericapayne/Pomodoro-Timer", langList: ['React Native', ' JavaScript']
+            },
+            {
+                id: 4, title: 'Saute : Recipe Mobile Application', desc: "A cooking and recipe mobile aplication", src: "https://github.com/ericapayne/saute-app", langList: ['React Native', 'JavaScript']
+            },
+            {
+                id: 5, title: 'Quiz Mobile Application', desc: "This quiz app project was made using expo and React Native. It has 3 categories to choose from. There are 10 questions and a results page.", src: "https://github.com/ericapayne/Quiz-app", langList: ['React Native', 'JavaScript']
+            }, 
+            {
+                id: 6, title: 'Build Your Own Adventure Game', desc: "A text-based Choose Your Own Adventure Game built in C#", src: "https://github.com/ericapayne/build-your-own-adventure-game", langList: ['C#']
+            }, 
+            {
+                id: 7, title: 'Ticket Box', desc: "A form web application for getting tickets using Vue.js", src: "https://github.com/ericapayne/ticket-box-vue", langList: ['JavaScript', 'CSS', 'HTML', 'Vue.js']
+            },
+            {
+                id: 8, title: 'Gatsby Blog Site', desc: "A web application made using Gatsby CLI deployed to Gatsby Cloud", src: "https://github.com/ericapayne/my-first-gatsby-site", langList: ['JavaScript', 'CSS', 'HTML', 'Gatsby']
+            }
         ];
 
-        const results = [];
+const results = [];
+        
+
+        
 
         projects.forEach(project => {
             results.push(
@@ -44,16 +65,25 @@ export class OtherProjects extends React.Component {
             )
         });
 
+        // const [showMore, setShowMore] = useState(false);
+        // const GRID_LIMIT = 6;
+        // const project = projects.map((pro, i) => (
+        //     <li>{pro.title}</li>
+        // ));
+        // const firstSix = projects.slice(0, GRID_LIMIT);
+        // const projectsToShow = showMore ? project : firstSix;
+
         return(           
             <section className="other-projects">             
                 <h2>Other Projects of Mine</h2>
                     <a className="github-link" href="https://www.github.com/ericapayne" rel="noopener noreferrer" target="_blank">view my full github</a>
                     <ul className="project-grid" id="myprojects">
-                        {results}                     
+                        {results}   
+                        projectsToShow                 
                     </ul>
-                    {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>View More</button> */}
+                    {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>{showMore ? "Show Less" : "Show More"}</button> */}
             </section>
         );
     }
-}
+
 

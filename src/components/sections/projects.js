@@ -76,10 +76,10 @@ const results = [];
         return(           
             <section className="other-projects">             
                 <h2>Other Projects of Mine</h2>
-                    <a className="github-link" href="https://www.github.com/ericapayne" rel="noopener noreferrer" target="_blank">view my full github</a>
+                    <a className="github-link inline-link" href="https://www.github.com/ericapayne" rel="noopener noreferrer" target="_blank " aria-label="Github Link" style={{visibility: "visible", opacity: 1, transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)", transition: "all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s"}}>view my full github</a>
                     <ul className="project-grid" id="myprojects">
                         {results}   
-                        projectsToShow                 
+                        {/* projectsToShow                  */}
                     </ul>
                     {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>{showMore ? "Show Less" : "Show More"}</button> */}
             </section>

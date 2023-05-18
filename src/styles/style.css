@@ -4,7 +4,7 @@
 } /* for using seperate files, you have to import @import './header' 
 make the seperate file _header.scss */
 html {
-  scrollbar-color: #495670 #081426;
+  scrollbar-color: #495670 #0a192f;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  background-color: #081426;
+  background-color: #0a192f;
   color: #8892b0;
   font-family: "Calibre", "Inter", "Poppins", sans-serif;
   font-size: 20px;
@@ -94,7 +94,7 @@ button {
   padding: 0px 50px;
   width: 93%;
   height: 100px;
-  background-color: rgba(8, 20, 38, 0.85);
+  background-color: rgba(10, 25, 47, 0.85);
   filter: none !important;
   pointer-events: auto !important;
   -webkit-user-select: auto !important;
@@ -168,19 +168,19 @@ button {
   padding: 10px;
 }
 .nav-side li a:hover {
-  color: #6474e5;
+  color: #7073FF;
 }
 .nav-side li a::before {
   content: "0" counter(item) ".";
   margin-right: 5px;
-  color: #6474e5;
+  color: #7073FF;
   font-size: 14px;
   text-align: right;
 }
 .nav-side .resume-button {
-  color: #6474e5;
+  color: #7073FF;
   background-color: transparent;
-  border: 1px solid #6474e5;
+  border: 1px solid #7073FF;
   border-radius: 4px;
   padding: 12px 16px;
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
@@ -231,7 +231,7 @@ button {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .social-list a:hover {
-  color: #6474e5;
+  color: #7073FF;
 }
 
 .social-list::after {
@@ -259,7 +259,7 @@ button {
 }
 
 .back-to-top {
-  background-color: #6474e5;
+  background-color: #7073FF;
   border: none;
   border-radius: 15px;
   height: 60px;
@@ -304,22 +304,22 @@ button {
   font-size: clamp(40px, 8vw, 80px);
 }
 .opening b {
-  color: #6474e5;
+  color: #7073FF;
 }
 .opening div {
   align-self: center;
 }
 .opening .one {
-  color: #6474e5;
+  color: #7073FF;
   font-weight: 400;
   margin: 0px 0px 30px 4px;
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
   font-size: clamp(14px, 5vw, 16px);
 }
 .opening .linkedin-link {
-  color: #6474e5;
+  color: #7073FF;
   background-color: transparent;
-  border: 1px solid #6474e5;
+  border: 1px solid #7073FF;
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
   font-size: 14px;
@@ -331,7 +331,7 @@ button {
   margin-top: 50px;
 }
 .opening .linkedin-link:hover {
-  background-color: rgba(100, 116, 229, 0.1);
+  background-color: rgba(100, 103, 255, 0.1);
 }
 
 .social-media .email-link {
@@ -408,14 +408,14 @@ button {
   max-width: 540px;
 }
 .about-me .inner p a {
-  color: #6474e5;
+  color: #7073FF;
   font-weight: 500;
 }
 .about-me em {
-  color: #6474e5;
+  color: #7073FF;
 }
 .about-me .fa-brands {
-  color: #6474e5;
+  color: #7073FF;
 }
 
 .num-header {
@@ -433,7 +433,7 @@ button {
   counter-increment: section 1;
   content: "0" counter(section) ".";
   margin-right: 10px;
-  color: #6474e5;
+  color: #7073FF;
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
   font-size: clamp(16px, 3vw, 20px);
   font-weight: 400;
@@ -446,7 +446,7 @@ button {
   width: 300px;
   height: 1px;
   margin-left: 20px;
-  background-color: #0f274b;
+  background-color: #233554;
 }
 
 .skills-list {
@@ -469,7 +469,7 @@ button {
   content: "▹";
   position: absolute;
   left: 0;
-  color: #6474e5;
+  color: #7073FF;
   font-size: 14px;
   line-height: 12px;
 }
@@ -482,7 +482,7 @@ button {
 }
 
 .fa-solid {
-  color: #6474e5;
+  color: #7073FF;
 }
 
 .skills-text {
@@ -516,7 +516,7 @@ button {
   border-radius: 4px;
 }
 .mypic::after {
-  border: 2px solid #6474e5;
+  border: 2px solid #7073FF;
   top: 20px;
   left: 20px;
   z-index: -1;
@@ -561,7 +561,7 @@ button {
   line-height: 1.3;
 }
 .panels .all-panels h3 .company {
-  color: #6474e5;
+  color: #7073FF;
 }
 .panels .all-panels .range {
   margin-bottom: 25px;
@@ -585,7 +585,7 @@ button {
   content: "▹";
   position: absolute;
   left: 0px;
-  color: #6474e5;
+  color: #7073FF;
 }
 
 /* End of Experience.js Section CSS */
@@ -611,7 +611,7 @@ button {
 }
 @media (max-width: 768px) {
   .featured-list {
-    box-shadow: 0 10px 30px -15px rgba(8, 20, 38, 0.7);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   }
 }
 .featured-list:not(:last-of-type) {
@@ -632,7 +632,7 @@ button {
   text-decoration: none;
 }
 .featured-list a:hover {
-  color: #6474e5;
+  color: #7073FF;
   text-decoration: none;
 }
 .featured-list .project-content {
@@ -662,7 +662,7 @@ button {
 }
 .featured-list .project-overline {
   margin: 10px 0px;
-  color: #6474e5;
+  color: #7073FF;
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
   font-size: 13px;
   font-weight: 400;
@@ -675,12 +675,12 @@ button {
   line-height: 1.1;
 }
 .featured-list .project-description {
-  box-shadow: 0 10px 30px -15px rgba(8, 20, 38, 0.7);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   position: relative;
   z-index: 2;
   padding: 25px;
   border-radius: 4px;
-  background-color: #0a1930;
+  background-color: #112240;
   color: #a8b2d1;
 }
 @media (max-width: 768px) {
@@ -846,9 +846,9 @@ button {
   box-sizing: border-box;
 }
 .other-projects .more-button {
-  color: #6474e5;
+  color: #7073FF;
   background-color: transparent;
-  border: 1px solid #6474e5;
+  border: 1px solid #7073FF;
   border-radius: 4px;
   font-size: 13px;
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
@@ -860,13 +860,13 @@ button {
   margin: 80px auto 0px;
 }
 .other-projects .more-button:hover {
-  background-color: rgba(100, 116, 229, 0.1);
+  background-color: rgba(100, 103, 255, 0.1);
 }
 
 .github-link {
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
   font-size: 14px;
-  color: #6474e5;
+  color: #7073FF;
 }
 
 .project-top {
@@ -911,12 +911,12 @@ button {
   height: 100%;
   padding: 2rem 1.75rem;
   border-radius: 4px;
-  background-color: #0a1930;
+  background-color: #112240;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow: auto;
 }
 .other-list-items:hover h3 a {
-  color: #6474e5;
+  color: #7073FF;
 }
 .other-list-items .project-top .project-links {
   display: flex;
@@ -969,9 +969,9 @@ p:last-child, p:last-of-type {
   text-align: center;
 }
 .contact .email-link {
-  color: #6474e5;
+  color: #7073FF;
   background-color: transparent;
-  border: 1px solid #6474e5;
+  border: 1px solid #7073FF;
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
   font-size: 14px;
@@ -991,7 +991,7 @@ p:last-child, p:last-of-type {
 }
 .contact .num-header {
   font-size: 20px;
-  color: #6474e5;
+  color: #7073FF;
   justify-content: center;
 }
 .contact .num-header::after {
@@ -1066,7 +1066,7 @@ p:last-child, p:last-of-type {
     width: 30px;
     height: 2px;
     border-radius: 4px;
-    background-color: #6474e5;
+    background-color: #7073FF;
     transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
     transform: rotate(225deg);
   }
@@ -1083,7 +1083,7 @@ p:last-child, p:last-of-type {
     width: 30px;
     height: 2px;
     border-radius: 4px;
-    background-color: #6474e5;
+    background-color: #7073FF;
     transition-timing-function: ease;
     transition-duration: 0.15s;
     transition-property: transform;
@@ -1097,7 +1097,7 @@ p:last-child, p:last-of-type {
     width: 30px;
     height: 2px;
     border-radius: 4px;
-    background-color: #6474e5;
+    background-color: #7073FF;
     transition-timing-function: ease;
     transition-duration: 0.15s;
     transition-property: transform;
@@ -1122,7 +1122,7 @@ p:last-child, p:last-of-type {
   width: 30px;
   height: 2px;
   border-radius: 4px;
-  background-color: #6474e5;
+  background-color: #7073FF;
   transition-duration: 0.22s;
   transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
   transform: rotate(0deg);
@@ -1136,7 +1136,7 @@ p:last-child, p:last-of-type {
   width: 30px;
   height: 2px;
   border-radius: 4px;
-  background-color: #6474e5;
+  background-color: #7073FF;
   transition-timing-function: ease;
   transition-duration: 0.15s;
   transition-property: transform;
@@ -1150,7 +1150,7 @@ p:last-child, p:last-of-type {
   width: 30px;
   height: 2px;
   border-radius: 4px;
-  background-color: #6474e5;
+  background-color: #7073FF;
   transition-timing-function: ease;
   transition-duration: 0.15s;
   transition-property: transform;
@@ -1205,8 +1205,8 @@ main.fillHeight {
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0px;
-    background-color: #0a1930;
-    box-shadow: -10px 0px 30px -15px rgba(8, 20, 38, 0.7);
+    background-color: #112240;
+    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
     z-index: 9;
     transform: translateX(100vw);
     visibility: hidden;
@@ -1227,8 +1227,8 @@ main.fillHeight {
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0px;
-    background-color: #0a1930;
-    box-shadow: -10px 0px 30px -15px rgba(8, 20, 38, 0.7);
+    background-color: #112240;
+    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
     z-index: 9;
     transform: translateX(0vw);
     visibility: visible;
@@ -1265,7 +1265,7 @@ main.fillHeight {
     content: "0" counter(item) ".";
     display: block;
     margin-bottom: 5px;
-    color: #6474e5;
+    color: #7073FF;
     font-size: 14px;
   }
 }
@@ -1281,13 +1281,13 @@ main.fillHeight {
   padding: 3px 3px 20px;
 }
 .side-menu-opened .side-list a:hover {
-  color: #6474e5;
+  color: #7073FF;
 }
 
 .resume-link {
-  color: #6474e5;
+  color: #7073FF;
   background-color: transparent;
-  border: 1px solid #6474e5;
+  border: 1px solid #7073FF;
   border-radius: 4px;
   font-size: 14px;
   font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
@@ -1316,34 +1316,34 @@ main.fillHeight {
 }
 
 /* End of menu.js css */
-.nb-link {
+.inline-link {
   display: inline-block;
   text-decoration: none;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
   position: relative;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: #6474e5;
+  color: #7073FF;
 }
-.nb-link:hover, .nb-link:focus, .nb-link:active {
-  color: #6474e5;
+.inline-link:hover, .inline-link:focus, .inline-link:active {
+  color: #7073FF;
   outline: 0;
 }
-.nb-link:hover:after, .nb-link:focus:after, .nb-link:active:after {
+.inline-link:hover:after, .inline-link:focus:after, .inline-link:active:after {
   width: 100%;
 }
-.nb-link:hover > *, .nb-link:focus > *, .nb-link:active > * {
-  color: #6474e5 !important;
+.inline-link:hover > *, .inline-link:focus > *, .inline-link:active > * {
+  color: #7073FF !important;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.nb-link:after {
+.inline-link:after {
   content: "";
   display: block;
   width: 0;
   height: 1px;
   position: relative;
   bottom: 0.37em;
-  background-color: #6474e5;
+  background-color: #7073FF;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */

@@ -16,7 +16,7 @@ export const Menu = () => {
         const navLinks = sections.map(section => {
             return (               
                 
-                    <li key={section.toString()}><a onClick={toggleMenu} href={'#' + section}>{section}</a></li>
+                    <li key={section.toString()}><a onClick={toggleMenu} href={'#' + section} aria-label={section + "Link"}>{section}</a></li>
                                          
             )
         });
@@ -38,7 +38,7 @@ export const Menu = () => {
                             <ol className="side-list">
                                 {navLinks}
                             </ol>
-                            <a className="resume-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13vDipqMVL3lpMinsTDjtGTpQl2t4T9eR/view?usp=sharing"> Resume</a>
+                            <a className="resume-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13vDipqMVL3lpMinsTDjtGTpQl2t4T9eR/view?usp=sharing" aria-label="Resume Link"> Resume</a>
                         </nav>
                     </aside>
                     </div>

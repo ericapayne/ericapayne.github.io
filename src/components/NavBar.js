@@ -26,7 +26,7 @@ export const NavBar = ({ isHome }) => {
 
   const navLinks = sections.map(section => {
       return (                              
-              <li key={section.toString()}><a href={'#' + section}>{section}</a></li>                                        
+              <li key={section.toString()}><a href={'#' + section} aria-label={section + "Link"}>{section}</a></li>                                        
       )
   });
         
@@ -35,7 +35,7 @@ export const NavBar = ({ isHome }) => {
     <header className="nav-header">
       <nav className="nav">
         <div className="logo">
-          <a className="" href="index.html"><img className="branding" src={brandpic} alt="branding image" width="109.5px" height="36px"/>
+          <a className="" href="index.html" aria-label="Home Link"><img className="branding" src={brandpic} alt="branding image" width="109.5px" height="36px"/>
           </a>
         </div>
         <div className="nav-side">

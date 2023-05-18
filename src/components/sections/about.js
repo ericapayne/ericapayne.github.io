@@ -1,5 +1,4 @@
 import React from "react";
-import mypic from '../../assets/imgs/me.png';
 import headshot from '../../assets/imgs/headshot.jpg'; 
 
 export const About = () => {
@@ -13,7 +12,7 @@ export const About = () => {
           <div className="inner">
             <div>
               <p>Hi! My name is Erica and I fell in love with coding back in 2004. I started my web development journey by learning <abbr title="Hypertext Markup Language">HTML</abbr> & <abbr title="Cascading Style Sheets">CSS</abbr> using just the application Notepad and ever since then, I have strived to learn more.</p>
-              <p>I am also an artist that draws and crafts and that plays into my love of frontend and designing web pages.  I also run a small clothing business called <a className="nb-link" href="https://www.nerdybit.co" rel="noopener noreferrer" target="_blank">Nerdy Bit</a> with my partner where we put our designs on lots of different things.</p>
+              <p>I am also an artist that draws and crafts and that plays into my love of frontend and designing web pages.  I also run a small clothing business called <a className="inline-link" href="https://www.nerdybit.co" rel="noopener noreferrer" target="_blank" aria-label="Nerdy Bit Shop">Nerdy Bit</a> with my partner where we put our designs on lots of different things.</p>
       
       
               <p>Some of my skills:</p>
@@ -30,7 +29,7 @@ export const About = () => {
     
             </div>
             <div className="mypic">
-              <img width="350" height="385.2"  src={headshot} alt="Headshot image of me"/>
+              <img className="mypic" width="350" height="385.2"  src={headshot} alt="Headshot of me"/>
             </div>
           </div>
       </section>

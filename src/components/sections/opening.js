@@ -20,7 +20,7 @@ export const Opening = () => {
     const three = (<p>Welcome, I am a Software Engineer born and raised in Los Angeles. I have my Bachelors in Computer Science from California State University Los Angeles. I am passionate about <b> Web Development</b> and <b>Full Stack Development. </b>I am currently looking for my next opportunity in a company.</p>);
 
     const four = (
-    <a className="linkedin-link" href="https://www.linkedin.com/in/erica-payne-d/" target="_blank" rel="noreferrer">Check out my LinkedIn!</a>);
+    <a className="linkedin-link" href="https://www.linkedin.com/in/erica-payne-d/" target="_blank" rel="noreferrer" aria-label="LinkedIn Link">Check out my LinkedIn!</a>);
 
     const items = [one, two, sub, three, four];
         

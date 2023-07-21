@@ -25,12 +25,12 @@ export const OtherProjects = () => {
             {
                 id: 6, title: 'Build Your Own Adventure Game', desc: "A text-based Choose Your Own Adventure Game built in C#", src: "https://github.com/ericapayne/build-your-own-adventure-game", langList: ['C#']
             }, 
-            {
-                id: 7, title: 'Ticket Box', desc: "A form web application for getting tickets using Vue.js", src: "https://github.com/ericapayne/ticket-box-vue", langList: ['JavaScript', 'CSS', 'HTML', 'Vue.js']
-            },
-            {
-                id: 8, title: 'Gatsby Blog Site', desc: "A web application made using Gatsby CLI deployed to Gatsby Cloud", src: "https://github.com/ericapayne/my-first-gatsby-site", langList: ['JavaScript', 'CSS', 'HTML', 'Gatsby']
-            }
+            // {
+            //     id: 7, title: 'Ticket Box', desc: "A form web application for getting tickets using Vue.js", src: "https://github.com/ericapayne/ticket-box-vue", langList: ['JavaScript', 'CSS', 'HTML', 'Vue.js']
+            // },
+            // {
+            //     id: 8, title: 'Gatsby Blog Site', desc: "A web application made using Gatsby CLI deployed to Gatsby Cloud", src: "https://github.com/ericapayne/my-first-gatsby-site", langList: ['JavaScript', 'CSS', 'HTML', 'Gatsby']
+            // }
         ];
 
 const results = [];

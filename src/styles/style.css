@@ -1346,4 +1346,101 @@ main.fillHeight {
   background-color: #7073FF;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0.5;
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 10px 0px;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+.certificates .cert-list-items {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+.certificates .cert-list-items .cert-inner {
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  display: flex;
+  justify-content: space-between;
+  -moz-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+  padding: 2rem 1.75rem;
+  border-radius: 4px;
+  background-color: #112240;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: auto;
+}
+.certificates .cert-top .cert-links {
+  margin-right: -10px;
+  color: #e6f1ff;
+}
+.certificates .cert-top .cert-links:hover {
+  color: #7073FF;
+}
+.certificates .cert-title {
+  color: #ccd6f6;
+  font-size: 18px;
+}
+.certificates .cert-desc {
+  color: #a8b2d1;
+  font-size: 17px;
+  display: flex;
+}
+.certificates .cert-desc p {
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.certificates .cert-skill-list {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding: 0px;
+  list-style: none;
+}
+.certificates .cert-skill-list ::before, .certificates .cert-skill-list ::after {
+  box-sizing: border-box;
+}
+.certificates .cert-skill-list li {
+  font-family: "SF Mono", "Fira Code", "Source Code Pro", monospace;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.certificates .cert-skill-list li:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.cert-top {
+  display: inline-flex;
+  -moz-box-pack: justify;
+  align-items: center;
+}
+
+.cert-grid {
+  list-style: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.cert-grid :hover .cert-inner, .cert-grid :focus-within .cert-inner {
+  transform: translateY(-7px);
 }/*# sourceMappingURL=style.css.map */

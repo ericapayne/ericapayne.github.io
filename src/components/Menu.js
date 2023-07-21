@@ -38,7 +38,7 @@ export const Menu = () => {
                             <ol className="side-list">
                                 {navLinks}
                             </ol>
-                            <a className="resume-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13vDipqMVL3lpMinsTDjtGTpQl2t4T9eR/view?usp=sharing" aria-label="Resume Link"> Resume</a>
+                            <a className="resume-link" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1gr5RcmhcedbX_hyNuZe8yyeXSshyBzlC/view?usp=drive_link" aria-label="Resume Link"> Resume</a>
                         </nav>
                     </aside>
                     </div>

@@ -43,7 +43,7 @@ export const NavBar = ({ isHome }) => {
             {navLinks}
           </ol>
           <div>
-              <a className="resume-button" aria-label="resume button" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13vDipqMVL3lpMinsTDjtGTpQl2t4T9eR/view?usp=sharing" role="button"> Resume</a>
+              <a className="resume-button" aria-label="resume button" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1gr5RcmhcedbX_hyNuZe8yyeXSshyBzlC/view?usp=drive_link" role="button"> Resume</a>
           </div>
         </div>
         <Menu />

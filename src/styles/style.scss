@@ -11,7 +11,7 @@ $lightest-slate: #ccd6f6;
 $white : #e6f1ff;
 $light-violet: #95A0F3;
 $violet : #7073FF;
-$violet-tint :  rgba(100,103,255, 0.1);
+$violet-tint :  rgba(112,115,255, 0.1);
 $font-sans : 'Calibre', 'Inter', 'Poppins', sans-serif;
 $font-mono : 'SF Mono', 'Fira Code', 'Source Code Pro', monospace;
 $font-xxs: 12px;
@@ -1455,7 +1455,7 @@ main.fillHeight {
     }
     & .cert-desc {
         color: $light-slate;
-        font-size: 17px;
+        font-size: $font-lg;
         display: flex;
         
         & p {

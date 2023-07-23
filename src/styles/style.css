@@ -331,7 +331,7 @@ button {
   margin-top: 50px;
 }
 .opening .linkedin-link:hover {
-  background-color: rgba(100, 103, 255, 0.1);
+  background-color: rgba(112, 115, 255, 0.1);
 }
 
 .social-media .email-link {
@@ -860,7 +860,7 @@ button {
   margin: 80px auto 0px;
 }
 .other-projects .more-button:hover {
-  background-color: rgba(100, 103, 255, 0.1);
+  background-color: rgba(112, 115, 255, 0.1);
 }
 
 .github-link {
@@ -1391,7 +1391,7 @@ main.fillHeight {
 }
 .certificates .cert-desc {
   color: #a8b2d1;
-  font-size: 17px;
+  font-size: 18px;
   display: flex;
 }
 .certificates .cert-desc p {

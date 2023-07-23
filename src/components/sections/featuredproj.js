@@ -23,7 +23,7 @@ export class FeaturedProjects extends React.Component {
                       <li>CSS</li>
                       <li>JavaScript</li>
                     </ul>
-                    <div className="project-links"><a href="https://github.com/ericapayne/spotify-jammming-project" aria-label="Spotify Jammming Project Github Link"><i className="fa-brands fa-github"></i></a></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/spotify-jammming-project" aria-label="Spotify Jammming Project Github Button"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={sjamming} alt="Jamming Project Screenshot" loading="lazy"/></div>
@@ -40,7 +40,7 @@ export class FeaturedProjects extends React.Component {
                       <li>CSS</li>
                       <li>JavaScript</li>
                     </ul>
-                    <div className="project-links"><a href="https://github.com/ericapayne/Book-exchange" aria-label="Book Exchange Project Github Link"><i className="fa-brands fa-github"></i></a></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/Book-exchange" aria-label="Book Exchange Project Github Button"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={bookex} alt="Book Exchange Project Screenshot" loading="lazy"/></div>
@@ -57,7 +57,7 @@ export class FeaturedProjects extends React.Component {
                       <li>npm</li>
                       <li>Movie database API</li>
                     </ul>
-                    <div className="project-links"><a href="https://github.com/ericapayne/Movie-Search-App" aria-label="Movie Search App Github Link"><i className="fa-brands fa-github"></i></a></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/Movie-Search-App" aria-label="Movie Search App Github Button"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={movieapp}  alt="Movie Mobile Application Screenshot" loading="lazy"/></div>
@@ -72,7 +72,7 @@ export class FeaturedProjects extends React.Component {
                       <li>C#</li>
                       <li>Unity</li>
                     </ul>
-                    <div className="project-links"><a href="https://github.com/ericapayne/Alpaca-My-Bags-Unity-Game" aria-label="Alpaca Game Github Link"><i className="fa-brands fa-github"></i></a></div>
+                    <div className="project-links"><a href="https://github.com/ericapayne/Alpaca-My-Bags-Unity-Game" aria-label="Alpaca Game Github Button"><i className="fa-brands fa-github"></i></a></div>
                   </div>
                 </div>
                 <div className="project-image"><img src={game} alt="Alpaca Game Project Screenshot" loading="lazy"/></div>

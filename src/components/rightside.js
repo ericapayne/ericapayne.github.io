@@ -25,7 +25,7 @@ export const RightSide = () => {
 
     return (
       <div className="right-side">
-        <button type="button" className="back-to-top" onClick={toTop} style={{display: visible ? 'inline' : 'none'}}>
+        <button type="button" className="back-to-top" aria-label="back to top button" onClick={toTop} style={{display: visible ? 'inline' : 'none'}}>
           <i className="fas fa-hand-point-up fa-xl" ></i>
         </button>
       </div>

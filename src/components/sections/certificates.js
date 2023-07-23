@@ -24,7 +24,7 @@ export class Certificates extends React.Component {
                                         
                                     </header>
                                     <div className="cert-desc">
-                                            <p style={{color: '#7073FF'}}>{cert.org}</p>
+                                            <p>{cert.org}</p>
                                             <p>{cert.date}</p>
 
                                         </div>

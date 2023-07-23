@@ -38,7 +38,7 @@ const ButtonStyle = styled.button`
   padding: 0 20px 2px;
   border-left: 2px solid #233554;
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? '#6474e5' : '#8892b0')};
+  color: ${({ isActive }) => (isActive ? '#7D7FFF' : '#8892b0')};
   font-family: 'SF Mono', 'Fira Code', monospace;
   font-size: 13px;
   text-align: left;
@@ -59,11 +59,11 @@ const ButtonStyle = styled.button`
   &:hover,
   &:focus {
     background-color: #112240;
-    color: #6474e5;
+    color: #7D7FFF;
   }
    
     &:active{
-      color: #6474e5;
+      color: #7D7FFF;
       outline: 0;
     
   }

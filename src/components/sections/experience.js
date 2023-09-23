@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
 const HighLight = styled.div`
@@ -30,7 +30,7 @@ const HighLight = styled.div`
 const ButtonStyle = styled.button`
   text-decoration: none;
   position: relative;
-  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   display: flex;
   align-items: center;
   width: 80%;
@@ -38,8 +38,8 @@ const ButtonStyle = styled.button`
   padding: 0 20px 2px;
   border-left: 2px solid #233554;
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? '#7D7FFF' : '#8892b0')};
-  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: ${({ isActive }) => (isActive ? "#7D7FFF" : "#8892b0")};
+  font-family: "SF Mono", "Fira Code", monospace;
   font-size: 13px;
   text-align: left;
   white-space: nowrap;
@@ -59,13 +59,12 @@ const ButtonStyle = styled.button`
   &:hover,
   &:focus {
     background-color: #112240;
-    color: #7D7FFF;
+    color: #7d7fff;
   }
-   
-    &:active{
-      color: #7D7FFF;
-      outline: 0;
-    
+
+  &:active {
+    color: #7d7fff;
+    outline: 0;
   }
 `;
 
@@ -110,7 +109,6 @@ const TabListStyles = styled.div`
 `;
 
 export const Experience = () => {
-  
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);
@@ -130,19 +128,19 @@ export const Experience = () => {
     }
   };
 
-    // Only re-run the effect if tabFocus changes
+  // Only re-run the effect if tabFocus changes
   useEffect(() => focusTab(), [tabFocus]);
 
   // Focus on tabs when using up & down arrow keys
-  const onKeyDown = e => {
+  const onKeyDown = (e) => {
     switch (e.key) {
-      case 'ArrowUp': {
+      case "ArrowUp": {
         e.preventDefault();
         setTabFocus(tabFocus - 1);
         break;
       }
 
-      case 'ArrowDown': {
+      case "ArrowDown": {
         e.preventDefault();
         setTabFocus(tabFocus + 1);
         break;
@@ -155,89 +153,123 @@ export const Experience = () => {
   };
 
   //job data object
-  const jobData = [{
-    title: 'Lead Lab Consultant',
-    company: 'Cal State LA',
-    range: 'September 2021 - May 2022',
-    duties: ['Supervised assistant lab consultants to make sure that all lab consultants follow university, ITS and Open Access Lab guidelines.', 'Resolved desktop issues on both Windows and Mac operating systems.', 'Routed service tickets to the appropriate departments and resolved them when completed using ServiceNow.']
-  },
-  {
-    title: 'Assistant Lab Consultant',
-    company: 'Cal State LA',
-    range: 'September 2017 - April 2019',
-    duties: ['Assisted students in the Open Access Lab with things like wireless printing, help with programs and copying.', 'Maintained labs in a neat and orderly manner for effective usage of equipment.', 'Regulated computer access when the labs are full using a waitlist.']
-  },
-  {
-    title: 'Technology & Games Teacher',
-    company: 'Star Education',
-    range: 'March 2015 - June 2016',
-    duties: ['Educated elementary school children grades K-5th different ways to interact with technology and proper computer skills through the use of games, coding, and other methods', 'Educated them coding by using Kano Computer Raspberry Pi Kits', 'Observed over and resolved issues on equipment including: laptops, routers and peripherals']
-  },
-  // {
-  //   title: 'Talent Member',
-  //   company: 'Pacific Theatres',
-  //   range: 'November 2012 - March 2014',
-  //   duties: ['Delivered superior service while connecting with our guests and supporting efforts to achieve pacific theatres financial goals.', 'Ensured the security of all cash, receipts and tickets.', 'Cleaned and maintained the exterior and interior areas of the theatre including auditoriums, restrooms, lobbies, concession areas, and box office areas.']
-  // },
-  {
-    title: 'Web Developer',
-    company: 'Grounding Relationships In People',
-    range: 'July 2010 - March 2013',
-    duties: ['Developed and maintained company website.', 'Ensured all content was up to date and all aspects were properly working.', 'Integrated audio, video and graphics into the site.','Quality tested and troubleshooted the site every time content was added or updated.']
-  },
-]
-        
-    return (
-      <section className="work" id="experience" data-sr-id="2">
-        <h2 className="num-header">Work Experience</h2>
+  const jobData = [
+    {
+      title: "Computer Science Teaching Associate",
+      company: "Cal State LA",
+      range: "August 2023 - Present",
+      duties: [
+        "Teach a computer science course of up to 30 students core skills in coding, through lectures and lab activities under the supervision of a faculty member",
+        "Conducted weekly activity sessions for students to supplement lecture material to ensure 100% comprehension of key concepts",
+        "Communicate with other 3 teaching assistants to verify teaching materials and laboratory assignments match up perfectly",
+      ],
+    },
+    {
+      title: "Freelance Full Stack React Developer",
+      company: "Lost Influence",
+      range: "September 2022 - Present",
+      duties: [
+        " Developed a large scale e-commerce web application that includes login authentication, messaging features, content management, personal feeds, and more; Handling both front end and back end components as a 1 person team",
+        "Assembled using React (including hooks, components, styled components, routes, etc), HTML, & CSS; Wireframed on Figma",
+        "Enhanced user experience by implementing responsive design and making sure the application adheres 100% to WCAG & ADA compliance",
+      ],
+    },
+    {
+      title: "Assistant Lab Consultant",
+      company: "Cal State LA",
+      range: "September 2017 - April 2019",
+      duties: [
+        "Assisted students in the Open Access Lab with things like wireless printing, help with programs and copying.",
+        "Maintained labs in a neat and orderly manner for effective usage of equipment.",
+        "Regulated computer access when the labs are full using a waitlist.",
+      ],
+    },
+    {
+      title: "Technology & Games Teacher",
+      company: "Star Education",
+      range: "March 2015 - June 2016",
+      duties: [
+        "Educated elementary school children grades K-5th different ways to interact with technology and proper computer skills through the use of games, coding, and other methods",
+        "Educated them coding by using Kano Computer Raspberry Pi Kits",
+        "Observed over and resolved issues on equipment including: laptops, routers and peripherals",
+      ],
+    },
+    // {
+    //   title: 'Talent Member',
+    //   company: 'Pacific Theatres',
+    //   range: 'November 2012 - March 2014',
+    //   duties: ['Delivered superior service while connecting with our guests and supporting efforts to achieve pacific theatres financial goals.', 'Ensured the security of all cash, receipts and tickets.', 'Cleaned and maintained the exterior and interior areas of the theatre including auditoriums, restrooms, lobbies, concession areas, and box office areas.']
+    // },
+    {
+      title: "Web Developer",
+      company: "Grounding Relationships In People",
+      range: "July 2010 - March 2013",
+      duties: [
+        "Developed and maintained company website.",
+        "Ensured all content was up to date and all aspects were properly working.",
+        "Integrated audio, video and graphics into the site.",
+        "Quality tested and troubleshooted the site every time content was added or updated.",
+      ],
+    },
+  ];
 
-        <div className="inner">
-          <TabListStyles role="tabList" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
-            {jobData && jobData.map((jobs, i) => (           
-              <ButtonStyle           
+  return (
+    <section className="work" id="experience" data-sr-id="2">
+      <h2 className="num-header">Work Experience</h2>
+
+      <div className="inner">
+        <TabListStyles
+          role="tabList"
+          aria-label="Job tabs"
+          onKeyDown={(e) => onKeyDown(e)}
+        >
+          {jobData &&
+            jobData.map((jobs, i) => (
+              <ButtonStyle
                 key={i}
                 isActive={activeTabId === i}
                 onClick={() => setActiveTabId(i)}
-                ref={el => (tabs.current[i] = el)}
+                ref={(el) => (tabs.current[i] = el)}
                 id={`tab-${i}`}
                 role="tab"
-                tabIndex={activeTabId === i ? '0' : '-1'}
+                tabIndex={activeTabId === i ? "0" : "-1"}
                 aria-selected={activeTabId === i ? true : false}
-                aria-controls={`panel-${i}`}>
+                aria-controls={`panel-${i}`}
+              >
                 <span>{jobs.company}</span>
               </ButtonStyle>
             ))}
-            <HighLight activeTabId={activeTabId}></HighLight>
-          </TabListStyles>
-          
-          <div className="panels">
-            {jobData.map((jobs, i) => (
-              <div 
-                className="all-panels"
-                key={i}
-                id={`panel-${i}`}
-                role="tabpanel"
-                tabIndex={activeTabId === i ? '0' : '-1'}
-                aria-labelledby={`tab-${i}`}
-                aria-hidden={activeTabId !== i}
-                hidden={activeTabId !== i}>
-                <h3>
-                  <span>{jobs.title}</span>
-                  <span className="company"> @ {jobs.company}</span>
-                </h3>
-                <p className="range">{jobs.range}</p>
-                <div>
-                  <ul>
-                    {jobs.duties.map((duty, i) => (
-                      <li key={i}>{duty}</li>
-                    ))}
-                  </ul>
-                </div>
+          <HighLight activeTabId={activeTabId}></HighLight>
+        </TabListStyles>
+
+        <div className="panels">
+          {jobData.map((jobs, i) => (
+            <div
+              className="all-panels"
+              key={i}
+              id={`panel-${i}`}
+              role="tabpanel"
+              tabIndex={activeTabId === i ? "0" : "-1"}
+              aria-labelledby={`tab-${i}`}
+              aria-hidden={activeTabId !== i}
+              hidden={activeTabId !== i}
+            >
+              <h3>
+                <span>{jobs.title}</span>
+                <span className="company"> @ {jobs.company}</span>
+              </h3>
+              <p className="range">{jobs.range}</p>
+              <div>
+                <ul>
+                  {jobs.duties.map((duty, i) => (
+                    <li key={i}>{duty}</li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>        
-      </section>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
-    
-}
+};

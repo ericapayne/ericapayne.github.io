@@ -1,0 +1,61 @@
+@use 'base';
+
+.work {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 100px 0px;
+    .inner {
+        min-height: 340px;
+        display: flex;
+        @media(max-width: 600px) {
+            display: block;
+        }
+    }    
+}
+
+.panels {
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+    @media (max-width:600px) {
+        margin-left: 0px;
+    }
+    .all-panels {
+        width: 100%;
+        height: auto;
+        padding: 10px 5px;  
+        h3 {
+            margin-bottom: 2px;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.3;
+            .company {
+                color: base.$violet;
+            }
+        }
+        & .range {
+            margin-bottom: 25px;
+            color: base.$light-slate;
+            font-size: 13px;
+            font-family: base.$font-mono;
+            font-weight: 300;
+        }
+        & ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            font-size: 18px;
+            li {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 10px;
+            }
+            & li::before {
+                content: "▹";
+                position: absolute;
+                left: 0px;
+                color: base.$violet;
+            }
+        }
+    }
+}

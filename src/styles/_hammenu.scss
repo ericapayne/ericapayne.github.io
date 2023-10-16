@@ -1,0 +1,313 @@
+@use 'base';
+
+.small-menu {
+    display: none;
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+.ham-button {
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+        -moz-box-pack: center;
+        justify-content: center;
+        -moz-box-align: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        margin-right: -15px;
+        padding: 15px;
+        border: 0px none;
+        background-color: transparent;
+        color: inherit;
+        text-transform: none;
+        transition-timing-function: linear;
+        transition-duration: 0.15s;
+        transition-property: opacity, filter;
+        cursor: pointer;
+    }
+    &:focus:not(:focus-visible) {
+        outline: none;
+        outline-offset: 0px;
+      }
+}
+.ham-button-clicked {
+    display: none;
+    @media (max-width: 768px){
+      display: flex;
+      -moz-box-pack: center;
+      justify-content: center;
+      -moz-box-align: center;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      margin-right: -15px;
+      padding: 15px;
+      border: 0px none;
+      background-color: transparent;
+      color: inherit;
+      text-transform: none;
+      transition-timing-function: linear;
+      transition-duration: 0.15s;
+      transition-property: opacity, filter;
+      &:focus:not(:focus-visible) {
+        outline: none;
+        outline-offset: 0px;
+      }
+      & .nav-menu-inner{
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: base.$violet;
+        transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        transform: rotate(225deg);
+        &::before {
+            width: 100%;
+            top: 0px;
+            opacity: 0;
+            transition: base.$ham-before-active;
+            content: "";
+            display: block;
+            position: absolute;
+            left: auto;
+            right: 0px;
+            width: 30px;
+            height: 2px;
+            border-radius: 4px;
+            background-color: base.$violet;
+            transition-timing-function: ease;
+            transition-duration: 0.15s;
+            transition-property: transform;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: auto;
+            right: 0px;
+            width: 30px;
+            height: 2px;
+            border-radius: 4px;
+            background-color: base.$violet;
+            transition-timing-function: ease;
+            transition-duration: 0.15s;
+            transition-property: transform;
+            width: 100%;
+            bottom: 0px;
+            transform: rotate(-90deg);
+            transition: base.$ham-after-active;
+        }
+      }
+      
+}
+}
+
+.nav-menu {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.nav-menu-inner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    border-radius: base.$border-radius;
+    background-color: base.$violet;
+    transition-duration: 0.22s;
+    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+    transform: rotate(0deg);
+    
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: auto;
+        right: 0px;
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: base.$violet;
+        transition-timing-function: ease;
+        transition-duration: 0.15s;
+        transition-property: transform;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: auto;
+        right: 0px;
+        width: 30px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: base.$violet;
+        transition-timing-function: ease;
+        transition-duration: 0.15s;
+        transition-property: transform;
+    }
+    
+}
+
+.nav-menu-inner::before {
+        
+        width: 120%;
+        top: -10px;
+        opacity: 1;
+        transition: base.$ham-before;
+}
+.nav-menu-inner::after {
+    
+    width: 80%;
+    bottom: -10px;
+    transform: rotate(0deg);
+    transition: base.$ham-after;
+}
+
+
+main.fillHeight {
+    padding: 0px 150px;
+    @media (max-width: 1080px) {
+        padding: 0px 100px;
+    }
+    @media (max-width: 768px) {
+        padding: 0px 50px;
+    }
+    @media (max-width: 480px) {
+        padding: 0px 25px;
+    }   
+}
+
+.side-menu {
+    display: none;
+    @media (max-width: 768px){
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0px;
+    background-color: base.$light-navy;
+    box-shadow: -10px 0px 30px -15px base.$navy-shadow;
+    z-index: 9;
+    transform: translateX(100vw);
+    visibility: hidden;
+    transition: base.$transition;
+    }
+}
+.side-menu-opened {
+    @media (max-width: 768px){
+        display: flex;
+        -moz-box-pack: center;
+        justify-content: center;
+        -moz-box-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding: 50px 10px;
+        width: min(75vw, 400px);
+        height: 100vh;
+        outline: 0px;
+        background-color: base.$light-navy;
+        box-shadow: -10px 0px 30px -15px base.$navy-shadow;
+        z-index: 9;
+        transform: translateX(0vw);
+        visibility: visible;
+        transition: base.$transition;
+        }
+    & .side-nav {
+        display: flex;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        -moz-box-align: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        color: base.$lightest-slate;
+        font-family: base.$font-mono;
+        text-align: center;
+    }
+    & .side-list {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        width: 100%;
+        li {
+            position: relative;
+            margin: 0px auto 20px;
+            counter-increment: item 1;
+            font-size: clamp(base.$font-sm,4vw,base.$font-lg);
+            @media (max-width: 600px) {
+                margin: 0px auto 10px;
+                &::before {
+                    content: "0" counter(item) ".";
+                    display: block;
+                    margin-bottom: 5px;
+                    color: base.$violet;
+                    font-size: base.$font-sm;
+                }
+            }
+        }
+        & a {
+            display: inline-block;
+            text-decoration: none;
+            text-decoration-skip-ink: auto;
+            color: inherit;
+            position: relative;
+            transition: base.$transition;
+            width: 100%;
+            padding: 3px 3px 20px;
+            &:hover {
+                color: base.$violet;
+            }
+        }
+        
+    }
+}
+.resume-link {
+    color: base.$violet;
+    background-color: transparent;
+    border: 1px solid base.$violet;
+    border-radius: base.$border-radius;
+    font-size: base.$font-sm;
+    font-family: base.$font-mono;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: base.$transition;
+    padding: 18px 50px;
+    margin: 10% auto 0px;
+    width: max-content;
+    &:hover {
+        background-color: rgba(100, 116, 229, 0.3)
+    }
+}
+
+.side-menu-opened nav {
+        display: flex;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        -moz-box-align: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        color: base.$lightest-slate;
+        font-family: base.$font-mono;
+        text-align: center;
+}

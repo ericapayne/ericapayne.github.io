@@ -1,0 +1,147 @@
+@use 'base';
+
+.other-projects {
+    display: flex;
+    flex-direction: column;
+    -moz-box-align: center;
+    align-items: center;
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+    box-sizing: border-box;
+    & .more-button {
+        color: base.$violet;
+        background-color: transparent;
+        border: 1px solid base.$violet;
+        border-radius: base.$border-radius;
+        font-size: base.$font-xs;
+        font-family: base.$font-mono;
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: base.$transition;
+        padding: 1.25rem 1.75rem;
+        margin: 80px auto 0px;
+        &:hover {
+            background-color: base.$violet-tint;
+        }
+    }
+}
+
+.github-link {
+    font-family: base.$font-mono;
+    font-size: base.$font-sm;
+    color: base.$violet;
+}
+
+
+.project-top {
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -moz-box-align: center;
+    align-items: center;
+    margin-bottom: 35px;
+    a {
+        text-decoration: none;
+        color:base.$lightest-slate;
+    }
+} 
+
+.project-grid {
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    position: relative;     
+    :hover, :focus-within {
+        .project-inner {
+            transform: translateY(-7px);
+        }
+        
+    } 
+    
+}  
+
+.more-button {
+    &:hover, &:focus-visible {
+        // background-color: base.$violet-tint;
+        outline: none;
+        box-shadow: 4px 4px 0 0 base.$violet;
+        transform: translate(-5px, -5px);
+    }
+}
+
+.other-list-items {
+    position: relative;
+    cursor: pointer;
+    transition: base.$transition;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    .project-inner {
+        box-shadow: 0 10px 30px -15px base.$navy-shadow;
+        display: flex;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        -moz-box-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        height: 100%;
+        padding: 2rem 1.75rem;
+        border-radius: base.$border-radius;
+        background-color: base.$light-navy;
+        transition: base.$transition;
+        
+        overflow: auto;
+        
+    }
+    &:hover h3 a {
+        color: base.$violet;
+    }
+    & .project-top .project-links{
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        margin-right: -10px;
+        color: base.$light-slate;
+    }
+    & .project-title {
+        margin: 0px 0px 10px;
+        color: base.$lightest-slate;
+        font-size: base.$font-xxl;
+        a {
+            position: static;
+        }
+    }
+    & .project-desc {
+        color: base.$light-slate;
+        font-size: 17px;
+    }
+    & .project-tech-list {
+        display: flex;
+        align-items: flex-end;
+        -moz-box-flex: 1;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 20px 0px 0px;
+        list-style: none;
+        ::before, ::after{
+            box-sizing: border-box;
+        }
+        & li {
+            font-family: base.$font-mono;
+            font-size: base.$font-xxs;
+            line-height: 1.75;
+            &:not(:last-of-type){
+                margin-right: 15px;
+            }
+        }
+    }
+}
+p:last-child , p:last-of-type {
+    margin: 0px;
+}

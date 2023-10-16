@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { navDelay, loaderDelay } from "../../utils";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 
 
 export const Opening = () => {
-    // const [isMounted, setIsMounted] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
 
-    // useEffect(() => {
-    //   const timeout = setTimeout(() => setIsMounted(true), 1000);
-    //   return () => clearTimeout(timeout);
-    // }, []);
+    useEffect(() => {
+      const timeout = setTimeout(() => setIsMounted(true), navDelay);
+      return () => clearTimeout(timeout);
+    }, []);
   
 
     const one = <h1 className="one" >Hi, my name is</h1>;
@@ -27,8 +28,9 @@ export const Opening = () => {
     return (
       <section className= "opening" >   
         <TransitionGroup>
-          {items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup" timeout={2000}>
+          {isMounted && items.map((item, i) => (
+            
+            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
               <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
 
             </CSSTransition>

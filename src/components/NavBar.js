@@ -99,10 +99,8 @@ const NavBar = () => {
     },
   ];
 
-
   const Logo = (
     <div className="logo">
-      
       <a className="" href="index.html" aria-label="Home Link">
         <img
           className="branding"
@@ -112,7 +110,6 @@ const NavBar = () => {
           height="36px"
         />
       </a>
-      
     </div>
   );
 
@@ -158,7 +155,6 @@ const NavBar = () => {
                       href="https://drive.google.com/file/d/1kfnZLlbEIuH9C5oln-FY9k01Gc9YOYUO/view?usp=drive_link"
                       role="button"
                     >
-                      
                       Resume
                     </a>
                   </div>

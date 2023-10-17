@@ -24,6 +24,9 @@ export const Opening = () => {
       opportunity in a company.
     </p>
   );
+  const five = (
+    <h4>my tech stack</h4>
+  )
 
   const four = (
     <a

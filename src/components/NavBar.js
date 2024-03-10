@@ -152,7 +152,7 @@ const NavBar = () => {
                       aria-label="resume button"
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://drive.google.com/file/d/1kfnZLlbEIuH9C5oln-FY9k01Gc9YOYUO/view?usp=drive_link"
+                      href="https://drive.google.com/file/d/1_borX6Kkhro_R4IKBQauZLD2CF_rXrR8/view?usp=drive_link"
                       role="button"
                     >
                       Resume

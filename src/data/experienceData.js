@@ -30,26 +30,26 @@ const jobData = [
       "Communicated with other 3 teaching assistants to verify teaching materials and laboratory assignments match up perfectly",
     ],
   },
-  {
-    title: "Freelance Full Stack React Developer",
-    company: "Lost Influence",
-    range: "September 2022 - December 2024",
-    duties: [
-      " Developed a large scale e-commerce web application that includes login authentication, messaging features, content management, personal feeds, and more; Handling both front end and back end components as a 1 person team",
-      "Assembled using React (including hooks, components, styled components, routes, etc), HTML, & CSS; Wireframed on Figma",
-      "Enhanced user experience by implementing responsive design and making sure the application adheres 100% to WCAG & ADA compliance",
-    ],
-  },
-  {
-    title: "Lead Lab Consultant",
-    company: "Cal State LA",
-    range: "August 2021 - June 2022",
-    duties: [
-      "Delivered technical support and maintained computer hardware and software on both Windows and Mac computers; Managed inventory and stocked all labs with necessary materials for 2-3 separate labs",
-      "Managed and trained a team of assistant lab consultants to align with university, ITS and Open Access Lab guidelines with one to three other leads; Reduced lab incidents by 15%",
-      "Routed service tickets to respective departments using ServiceNow, resolving issues without escalation; Reduced ticket resolution time by 20%",
-    ],
-  },
+  // {
+  //   title: "Freelance Full Stack React Developer",
+  //   company: "Lost Influence",
+  //   range: "September 2022 - December 2024",
+  //   duties: [
+  //     " Developed a large scale e-commerce web application that includes login authentication, messaging features, content management, personal feeds, and more; Handling both front end and back end components as a 1 person team",
+  //     "Assembled using React (including hooks, components, styled components, routes, etc), HTML, & CSS; Wireframed on Figma",
+  //     "Enhanced user experience by implementing responsive design and making sure the application adheres 100% to WCAG & ADA compliance",
+  //   ],
+  // },
+  // {
+  //   title: "Lead Lab Consultant",
+  //   company: "Cal State LA",
+  //   range: "August 2021 - June 2022",
+  //   duties: [
+  //     "Delivered technical support and maintained computer hardware and software on both Windows and Mac computers; Managed inventory and stocked all labs with necessary materials for 2-3 separate labs",
+  //     "Managed and trained a team of assistant lab consultants to align with university, ITS and Open Access Lab guidelines with one to three other leads; Reduced lab incidents by 15%",
+  //     "Routed service tickets to respective departments using ServiceNow, resolving issues without escalation; Reduced ticket resolution time by 20%",
+  //   ],
+  // },
   /* {
     title: "Assistant Lab Consultant",
     company: "Cal State LA",

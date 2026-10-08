@@ -46,7 +46,7 @@ export const Menu = () => {
               className="resume-link"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1kfnZLlbEIuH9C5oln-FY9k01Gc9YOYUO/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1Zn8Hzgc2hY92kdPe_FL_j65h54_VoPTh/view?usp=drive_link"
               aria-label="Resume Link"
             >
               {" "}

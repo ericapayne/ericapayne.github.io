@@ -1,18 +1,39 @@
 const jobData = [
   {
+    title: "Computer Scientist / Data Analyst",
+    company: "United States Air Force",
+    range: "September 2024 - Present",
+    duties: [
+      "Designed, developed, and maintained internal Python-based software applications, applying Git version control, quality documentation standards, and industry best coding practices throughout the full development lifecycle",
+      "Built backend data-processing programs and tools (leveraging Python, pandas, and NumPy) that ingest, parse, and structure test data from electronic warfare (EW) systems for downstream use",
+      "Refactored and rebuilt multiple existing tools, improving processing speed and efficiency by 30-40%",
+      "Built custom reporting features to present analysis results as clear, accurate plots, tables, and other visual representations for engineering stakeholders"
+    ],
+  },
+  {
+    title: "Application Support Analyst Intern",
+    company: "Paramount",
+    range: "June 2024 - August 2024",
+    duties: [
+      "Assisted in defining, documenting, and evaluating current business functions and information needs",
+      "Provided level 1 support and troubleshooting for managed applications and infrastructure systems; escalated issues as necessary, including performing hands-on corrections of problems",
+      "Supported the Studio Systems department with assisting with managing various business applications while implementing and creating technology solutions for application and system issues",
+    ],
+  },
+  {
     title: "Computer Science Teaching Associate",
     company: "Cal State LA",
-    range: "August 2023 - Present",
+    range: "August 2023 - December 2024",
     duties: [
-      "Teach a computer science course of up to 30 students core skills in coding, through lectures and lab activities under the supervision of a faculty member",
+      "Taught a computer science course of up to 30 students core skills in coding, through lectures and lab activities under the supervision of a faculty member",
       "Conducted weekly activity sessions for students to supplement lecture material to ensure 100% comprehension of key concepts",
-      "Communicate with other 3 teaching assistants to verify teaching materials and laboratory assignments match up perfectly",
+      "Communicated with other 3 teaching assistants to verify teaching materials and laboratory assignments match up perfectly",
     ],
   },
   {
     title: "Freelance Full Stack React Developer",
     company: "Lost Influence",
-    range: "September 2022 - Present",
+    range: "September 2022 - December 2024",
     duties: [
       " Developed a large scale e-commerce web application that includes login authentication, messaging features, content management, personal feeds, and more; Handling both front end and back end components as a 1 person team",
       "Assembled using React (including hooks, components, styled components, routes, etc), HTML, & CSS; Wireframed on Figma",
@@ -29,7 +50,7 @@ const jobData = [
       "Routed service tickets to respective departments using ServiceNow, resolving issues without escalation; Reduced ticket resolution time by 20%",
     ],
   },
-  {
+  /* {
     title: "Assistant Lab Consultant",
     company: "Cal State LA",
     range: "September 2017 - April 2019",
@@ -38,7 +59,7 @@ const jobData = [
       "Maintained labs in a neat and orderly manner for effective usage of equipment.",
       "Regulated computer access when the labs are full using a waitlist.",
     ],
-  },
+  }, */
   // {
   //   title: "Technology & Games Teacher",
   //   company: "Star Education",

@@ -11,17 +11,17 @@ const featured = [
       languages: ["React", "HTML", "CSS", "JavaScript"],
       btn_aria: "Jamming Project Button Link"
     },
-    {
-      overline: "Featured Project",
-      title: "Book Exchange Web App",
-      url: "https://github.com/ericapayne/Book-exchange",
-      img_url: require("../assets/imgs/home.jpg"),
-      img_alt: "Book Exchange Project Screenshot",
-      link_aria: "Book Exchange Project Github Link",
-      description: "A web application for a book exchange system. You have to be logged in to view books, post a book, create a wishlist and also add books to your cart.",
-      languages: ["Django", "Python", "HTML", "CSS"],
-      btn_aria: "Book Exchange Project Button"
-    },
+    // {
+    //   overline: "Featured Project",
+    //   title: "Book Exchange Web App",
+    //   url: "https://github.com/ericapayne/Book-exchange",
+    //   img_url: require("../assets/imgs/home.jpg"),
+    //   img_alt: "Book Exchange Project Screenshot",
+    //   link_aria: "Book Exchange Project Github Link",
+    //   description: "A web application for a book exchange system. You have to be logged in to view books, post a book, create a wishlist and also add books to your cart.",
+    //   languages: ["Django", "Python", "HTML", "CSS"],
+    //   btn_aria: "Book Exchange Project Button"
+    // },
     {
       overline: "Featured Project",
       title: "Movie Search Mobile App",
